@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:textAlignment="center"
+    android:background="@drawable/orge"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -16,7 +17,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="61dp" />
+            android:layout_height="120dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -24,16 +25,19 @@
             android:layout_height="wrap_content"
             android:text="L’ORGUE DE VALLS"
             android:textAlignment="center"
+            android:textColor="#E69810"
             android:textSize="34sp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="54dp" />
+            android:layout_height="84dp" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/btn_historia"
+            android:layout_width="800px"
+            android:layout_height="300px"
+            android:layout_gravity="center"
+            android:shadowColor="#B19A72"
             android:text="HISTÒRIA"
             android:textAlignment="center" />
 
@@ -42,9 +46,12 @@
             android:layout_height="29dp" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="COMENÇAR EL JOC" />
+            android:id="@+id/btn_inici_joc"
+            android:layout_width="800px"
+            android:layout_height="300px"
+            android:layout_gravity="center"
+            android:text="COMENÇAR EL JOC"
+            android:textAlignment="center" />
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
