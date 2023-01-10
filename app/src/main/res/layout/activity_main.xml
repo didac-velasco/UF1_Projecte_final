@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/_673359659609"
     android:textAlignment="center"
-    android:background="@drawable/orge"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -17,7 +17,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="120dp" />
+            android:layout_height="125dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -30,16 +30,18 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="84dp" />
+            android:layout_height="92dp" />
 
         <Button
             android:id="@+id/btn_historia"
             android:layout_width="800px"
             android:layout_height="300px"
             android:layout_gravity="center"
-            android:shadowColor="#B19A72"
+            android:background="#66000000"
             android:text="HISTÒRIA"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#F4A067"
+            android:textSize="20sp"/>
 
         <Space
             android:layout_width="match_parent"
@@ -51,7 +53,10 @@
             android:layout_height="300px"
             android:layout_gravity="center"
             android:text="COMENÇAR EL JOC"
-            android:textAlignment="center" />
+            android:background="#66000000"
+            android:textAlignment="center"
+            android:textColor="#F4A067"
+            android:textSize="20sp"/>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
