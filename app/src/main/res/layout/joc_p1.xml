@@ -12,6 +12,7 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        android:background="#D5D6D6"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +27,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="&quot;Busqueu aquest carreu i situeu-lo al plànol. (cal respondre per avançar)&quot;" />
+            android:text="Busqueu aquest carreu i situeu-lo al plànol. (cal respondre per avançar)" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -36,7 +37,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="34dp" />
+            android:layout_height="32dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,6 +92,32 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/i6" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="23dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#F6F3F3"
+                android:text="<-" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+                android:text="->" />
         </LinearLayout>
 
     </LinearLayout>
