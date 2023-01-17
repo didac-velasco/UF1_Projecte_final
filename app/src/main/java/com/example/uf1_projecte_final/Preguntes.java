@@ -15,7 +15,7 @@ public class Preguntes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.joc_p1);
         pregunta = findViewById(R.id.textViewPregunta);
-        btnimageButton1 = (ImageButton) findViewById(R.id.imageButton1);
+       btnimageButton1 = (ImageButton) findViewById(R.id.imageButton1);
         btnimageButton2 = (ImageButton) findViewById(R.id.imageButton2);
         btnimageButton3 = (ImageButton) findViewById(R.id.imageButton3);
         btnimageButton4 = (ImageButton) findViewById(R.id.imageButton4);
@@ -25,6 +25,6 @@ public class Preguntes extends AppCompatActivity {
         btnsiguiente = findViewById(R.id.seguent);
         btnanterior = findViewById(R.id.anterior);
 
-        //pregunta.setText("Busqueu aquest carreu i situeu-lo al plànol");
+        pregunta.setText("Busqueu aquest carreu i situeu-lo al plànol");
     }
 }
