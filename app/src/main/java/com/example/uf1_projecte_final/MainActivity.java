@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         Button b_historia = (Button) findViewById(R.id.btn_historia);
         Button b_joc = (Button) findViewById(R.id.btn_inici_joc);
 
+        //creem intent
         b_joc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         b_historia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( MainActivity.this, Preguntes.class); //crear intent
+                Intent intent = new Intent( MainActivity.this, Historia.class); //crear intent
                 startActivity(intent); //executar intent
             }
         });
