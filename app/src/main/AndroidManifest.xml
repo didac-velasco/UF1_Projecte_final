@@ -25,6 +25,17 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity
+            android:name=".Preguntes"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Historia"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>
