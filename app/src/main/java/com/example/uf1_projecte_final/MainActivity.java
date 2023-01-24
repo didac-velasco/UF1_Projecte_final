@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         b_joc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( MainActivity.this, Preguntes.class); //crear intent
+                Intent intent = new Intent( MainActivity.this, PreguntesJoc1.class); //crear intent
                 startActivity(intent); //executar intent
             }
         });

@@ -1,17 +1,19 @@
 package com.example.uf1_projecte_final;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Preguntes extends AppCompatActivity {
+public class PreguntesJoc1 extends AppCompatActivity {
     int contadorPreguntes=1, errorsInt=0, encertsInt=0, idPregunta=0;
 
     private ArrayList<String> preguntesArray = new ArrayList();
@@ -32,7 +34,6 @@ public class Preguntes extends AppCompatActivity {
 
         EditText encerts = (EditText) findViewById(R.id.idEncerts);
         EditText errors = (EditText) findViewById(R.id.idErrors);
-
 
         ImageButton btnanterior = (ImageButton) findViewById(R.id.btAnterior);
 
@@ -55,9 +56,8 @@ public class Preguntes extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(contadorPreguntes==1){
-                    idPregunta++;
-                    preguntaa.setText(preguntesArray.get(idPregunta));
-                    contadorPreguntes++;
+                    Intent intent = new Intent( PreguntesJoc1.this, PreguntesJoc2.class); //crear intent
+                    startActivity(intent); //executar intent
 
 
                     encertsInt++;
@@ -157,7 +157,7 @@ public class Preguntes extends AppCompatActivity {
                     String num= encertsInt+""; //passem a String
                     encerts.setText(num);
 
-                    Intent intent = new Intent( Preguntes.this, MainActivity.class); //crear intent
+                    Intent intent = new Intent( PreguntesJoc1.this, MainActivity.class); //crear intent
                     startActivity(intent); //executar intent
                 } else {
                     errorsInt++;

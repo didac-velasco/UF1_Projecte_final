@@ -27,7 +27,12 @@
         </activity>
 
         <activity
-            android:name=".Preguntes"
+            android:name=".PreguntesJoc1"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".PreguntesJoc2"
             android:exported="true">
 
         </activity>
