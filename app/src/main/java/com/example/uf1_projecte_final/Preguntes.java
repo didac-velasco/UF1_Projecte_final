@@ -19,15 +19,17 @@ public class Preguntes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.joc1);
-        TextView preguntaa = findViewById(R.id.textViewPregunta);
+
         //recuperem valors
+        TextView preguntaa = findViewById(R.id.textViewPregunta);
+
         ImageButton btnimageButton1 = (ImageButton) findViewById(R.id.imageButton1);
         ImageButton btnimageButton2 = (ImageButton) findViewById(R.id.imageButton2);
         ImageButton btnimageButton3 = (ImageButton) findViewById(R.id.imageButton3);
         ImageButton btnimageButton4 = (ImageButton) findViewById(R.id.imageButton4);
         ImageButton btnimageButton5 = (ImageButton) findViewById(R.id.imageButton5);
         ImageButton btnimageButton6 = (ImageButton) findViewById(R.id.imageButton6);
-        //ImageView imatge = (ImageView) findViewById(R.id.imageView2);
+
         EditText encerts = (EditText) findViewById(R.id.idEncerts);
         EditText errors = (EditText) findViewById(R.id.idErrors);
 
