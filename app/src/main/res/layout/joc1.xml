@@ -121,7 +121,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/idEncerts"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -130,6 +130,7 @@
                 android:inputType="number"
                 android:text="0"
                 android:textColor="#68F106"
+                android:enabled="false"
                 tools:text="0" />
 
             <TextView
@@ -143,7 +144,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextNumber2"
+                android:id="@+id/idErrors"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -151,6 +152,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="0"
+                android:enabled="false"
                 android:textColor="#F30303" />
         </LinearLayout>
 
