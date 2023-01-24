@@ -38,11 +38,8 @@ public class Preguntes extends AppCompatActivity {
 
         //afegim preguntes a la llista
         preguntesArray.add("BUSQUEU AQUEST CARREU I SITUEU-LO AL PLÀNOL. (CAL RESPONDRE PER AVANÇAR");
-        preguntesArray.add("Durant la visita haureu d’anar-vos fixant si hi ha recordatoris referents a la ciutat tal com hem vist a fora. Quantifiqueu-los i al final del recorregut trieu la resposta correcta.");
-        preguntesArray.add("aaa");
-        preguntesArray.add("bbb");
-        preguntesArray.add("ccc");
-        preguntesArray.add("ddd");
+        preguntesArray.add("Segons la imatge, on creieu que estava situat l’orgue anterior? Situeu-lo al plànol");
+        preguntesArray.add("Observeu bé la imatge i responeu.");
 
         preguntaa.setText(preguntesArray.get(0));
 
