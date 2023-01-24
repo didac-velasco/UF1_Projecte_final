@@ -1,5 +1,6 @@
 package com.example.uf1_projecte_final;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -27,6 +28,8 @@ public class Preguntes extends AppCompatActivity {
         ImageButton btnimageButton5 = (ImageButton) findViewById(R.id.imageButton5);
         ImageButton btnimageButton6 = (ImageButton) findViewById(R.id.imageButton6);
         ImageView imatge = (ImageView) findViewById(R.id.imageView2);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+       // ImageView imatge2 = (ImageView) findViewById(R.id.imageView3);
 
         Button btnsiguiente = findViewById(R.id.seguent);
         Button btnanterior = findViewById(R.id.anterior);
@@ -42,6 +45,8 @@ public class Preguntes extends AppCompatActivity {
             public void onClick(View view) {
                 contadorPreguntes++;
                 pregunta.setText(preguntesArray.get(contadorPreguntes));
+                imatge.setBackgroundResource(R.drawable.aaaaa);
+
             }
         });
         btnanterior.setOnClickListener(new View.OnClickListener() {
