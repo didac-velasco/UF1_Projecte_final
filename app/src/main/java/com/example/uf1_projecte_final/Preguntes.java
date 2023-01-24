@@ -31,7 +31,7 @@ public class Preguntes extends AppCompatActivity {
 
 
         Button btnsiguiente = findViewById(R.id.seguent);
-        Button btnanterior = findViewById(R.id.anterior);
+        Button btnanterior = findViewById(R.id.btAnterior);
 
         //afegim preguntes a la llista
         preguntesArray.add("BUSQUEU AQUEST CARREU I SITUEU-LO AL PLÀNOL. (CAL RESPONDRE PER AVANÇAR");
