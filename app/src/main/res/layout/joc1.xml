@@ -8,9 +8,8 @@
 
     <LinearLayout
         android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_height="739dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,7 +31,7 @@
         <TextView
             android:id="@+id/textViewPregunta"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:background="#66000000"
             android:gravity="center"
             android:text="    BUSQUEU AQUEST CARREU I SITUEU-LO AL PLÀNOL. (CAL RESPONDRE PER AVANÇAR)"
@@ -43,12 +42,12 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="205dp"
+            android:layout_height="175dp"
             app:srcCompat="@drawable/p1" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="11dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,7 +56,7 @@
 
             <ImageButton
                 android:id="@+id/imageButton1"
-                android:layout_width="126dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/i1" />
@@ -65,14 +64,14 @@
             <ImageButton
                 android:id="@+id/imageButton2"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/i2" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/i3" />
 
@@ -85,22 +84,22 @@
 
             <ImageButton
                 android:id="@+id/imageButton4"
-                android:layout_width="126dp"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/i4" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
-                android:layout_width="95dp"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/i5" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/i6" />
         </LinearLayout>
