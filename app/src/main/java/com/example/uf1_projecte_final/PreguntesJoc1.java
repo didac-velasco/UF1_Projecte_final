@@ -1,8 +1,6 @@
 package com.example.uf1_projecte_final;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -24,6 +22,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
 
         //recuperem valors
         TextView preguntaa = findViewById(R.id.textViewPregunta);
+        ImageView imatgee = findViewById(R.id.imageView2);
 
         ImageButton btnimageButton1 = (ImageButton) findViewById(R.id.imageButton1);
         ImageButton btnimageButton2 = (ImageButton) findViewById(R.id.imageButton2);
