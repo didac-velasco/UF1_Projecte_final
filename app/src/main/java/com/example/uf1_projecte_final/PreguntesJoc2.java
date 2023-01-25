@@ -10,14 +10,14 @@ import android.widget.TextView;
 
 public class PreguntesJoc2 extends AppCompatActivity {
     Bundle bundle;
+    int erInt, enInt;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.joc2);
 
         bundle=getIntent().getExtras();
-        int erInt = bundle.getInt("errors");
-        int enInt = bundle.getInt("encerts");
-        //int errorInt, encertsInt;
+        erInt = bundle.getInt("errors");
+        enInt = bundle.getInt("encerts");
 
         TextView preguntaa = findViewById(R.id.textViewPregunta);
 
@@ -31,8 +31,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
         EditText encerts = (EditText) findViewById(R.id.idEncerts);
         EditText errors = (EditText) findViewById(R.id.idErrors);
 
-        encerts.setText(ErrorsEncerts(enInt));
-        errors.setText(ErrorsEncerts(erInt));
+        encerts.setText(String.valueOf(enInt));
+        errors.setText(String.valueOf(erInt));
 
         preguntaa.setText("OBSERVEU BÉ LA IMATGE I RESPONEU");
         res1.setText("ESTÀ ARRAN DE TERRA");
@@ -44,19 +44,18 @@ public class PreguntesJoc2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (res2.isChecked()) {
-                    encerts.setText(enInt);
+                    enInt++;
+                    encerts.setText(String.valueOf(enInt));
+
                     preguntaa.setText("QUINA ÉS LA RELACIÓ ENTRE EL DISSENY DE LA FAÇANA DEL NOU ORGUE I LA CIUTAT DE VALLS?");
                     res1.setText("ELS CALÇOTS I ELS CASTELLS");
                     res2.setText("ELS CASTELLS I EL CAMPANAR");
                     res3.setText("EL CAMPANAR I ELS GEGANTS");
                 } else {
-                    //errors.setText(ErrorsEncerts(errorsInt));
+                    erInt++;
+                    errors.setText(String.valueOf(erInt));
                 }
             }
         });
-    }
-    public String ErrorsEncerts(int sumar){
-        String num= sumar+""; //passem a String
-        return num;
     }
 }

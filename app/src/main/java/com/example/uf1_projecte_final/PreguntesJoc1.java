@@ -25,6 +25,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
         TextView omplirPregunta = findViewById(R.id.textViewPregunta);
         ImageView imatgee = findViewById(R.id.imageView2);
 
+
         ImageButton btnimageButton1 = (ImageButton) findViewById(R.id.imageButton1);
         ImageButton btnimageButton2 = (ImageButton) findViewById(R.id.imageButton2);
         ImageButton btnimageButton3 = (ImageButton) findViewById(R.id.imageButton3);
@@ -55,7 +56,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
                     encertsInt=0;
                     Toast.makeText(getApplicationContext(), "No hi han més preguntes!", Toast.LENGTH_SHORT).show();
                 }
-                encerts.setText(ErrorsEncerts(encertsInt));
+                encerts.setText(String.valueOf(encertsInt));
             }
         });
         btnimageButton1.setOnClickListener(new View.OnClickListener() {
@@ -63,14 +64,18 @@ public class PreguntesJoc1 extends AppCompatActivity {
             public void onClick(View view) {
                 if(contadorPreguntes==1){
                     encertsInt++;
-                    encerts.setText(ErrorsEncerts(encertsInt));
+                    encerts.setText(String.valueOf(encertsInt));
+
+                    //posar imatge nova
+                    int aaaaa = R.drawable.aaaaa;
+                    imatgee.setImageDrawable(getResources().getDrawable(aaaaa));
 
                     idPregunta++;
                     omplirPregunta.setText(preguntesArray.get(idPregunta));
                     contadorPreguntes++;
                 } else {
                     errorsInt++;
-                    errors.setText(ErrorsEncerts(errorsInt));
+                    errors.setText(String.valueOf(errorsInt));
                 }
             }
         });
@@ -79,7 +84,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
             public void onClick(View view) {
                 if(contadorPreguntes==2){
                     encertsInt++;
-                    encerts.setText(ErrorsEncerts(encertsInt));
+                    encerts.setText(String.valueOf(encertsInt));
 
                     Intent intent = new Intent( PreguntesJoc1.this, PreguntesJoc2.class); //crear intent
                     intent.putExtra("errors", errorsInt);
@@ -87,7 +92,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
                     startActivity(intent); //executar intent
                 } else {
                     errorsInt++;
-                    errors.setText(ErrorsEncerts(errorsInt));
+                    errors.setText(String.valueOf(errorsInt));
                 }
             }
         });
@@ -95,33 +100,29 @@ public class PreguntesJoc1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 errorsInt++;
-                errors.setText(ErrorsEncerts(errorsInt));
+                errors.setText(String.valueOf(errorsInt));
             }
         });
         btnimageButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 errorsInt++;
-                errors.setText(ErrorsEncerts(errorsInt));
+                errors.setText(String.valueOf(errorsInt));
             }
         });
         btnimageButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 errorsInt++;
-                errors.setText(ErrorsEncerts(errorsInt));
+                errors.setText(String.valueOf(errorsInt));
             }
         });
         btnimageButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 errorsInt++;
-                errors.setText(ErrorsEncerts(errorsInt));
+                errors.setText(String.valueOf(errorsInt));
             }
         });
-    }
-    public String ErrorsEncerts(int sumar){
-        String num= sumar+""; //passem a String
-        return num;
     }
 }
