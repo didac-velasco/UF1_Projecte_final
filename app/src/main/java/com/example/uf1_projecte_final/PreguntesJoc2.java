@@ -2,6 +2,8 @@ package com.example.uf1_projecte_final;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -17,19 +19,26 @@ public class PreguntesJoc2 extends AppCompatActivity {
         RadioButton res3 = (RadioButton) findViewById(R.id.rb3);
         RadioButton res4 = (RadioButton) findViewById(R.id.rb4);
 
+        ImageButton Siguiente = (ImageButton) findViewById(R.id.imatgeButtonNext);
+
         preguntaa.setText("Quina és la relació entre el disseny de la façana del nou orgue i la ciutat de Valls?");
         res1.setText("els calçots i els castells");
         res2.setText("els castells i el campanar");
         res3.setText("el campanar i els gegants");
         res4.setText("cap relació");
 
-        if (res1.isChecked()) {
-            preguntaa.setText("Que dia es hoy");
-            res1.setText("Lunes");
-            res2.setText("Martes");
-            res3.setText("Miercoles");
+        Siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (res1.isChecked()) {
+                    preguntaa.setText("Que dia es hoy");
+                    res1.setText("Lunes");
+                    res2.setText("Martes");
+                    res3.setText("Miercoles");
+                    res4.setText("Jueves");
 
-        }
-
+                }
+            }
+        });
     }
 }
