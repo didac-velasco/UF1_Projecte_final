@@ -159,7 +159,7 @@
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="28dp"
+                android:layout_width="wrap_content"
                 android:layout_height="41dp"
                 android:layout_weight="1" />
 
@@ -187,6 +187,19 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#DC6C3F"
+                app:srcCompat="@android:drawable/ic_media_ff" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
                 android:layout_weight="1" />
         </LinearLayout>
 

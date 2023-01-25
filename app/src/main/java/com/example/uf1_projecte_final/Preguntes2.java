@@ -8,7 +8,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class Preguntes2 extends AppCompatActivity {
-
+    //didac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.joc2);
