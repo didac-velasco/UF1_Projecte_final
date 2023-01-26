@@ -52,7 +52,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent( PreguntesJoc1.this, PopupInfo.class); //crear intent
-                intent.putExtra("posicio", contadorPreguntes);
+                intent.putExtra("posicio", 1);
                 startActivity(intent); //executar intent
             }
         });

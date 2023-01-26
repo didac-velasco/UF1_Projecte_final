@@ -7,10 +7,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class finalJoc extends AppCompatActivity {
+    Bundle bundle;
+    int erInt, enInt;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.final_joc);
 
+        bundle = getIntent().getExtras();
+        erInt = bundle.getInt("errors");
+        enInt = bundle.getInt("encerts");
         Button boto = (Button) findViewById(R.id.button);
 
         boto.setOnClickListener(new View.OnClickListener() {

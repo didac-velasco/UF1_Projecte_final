@@ -24,7 +24,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
     LinearLayout layoutradiobutton, layoutrelacio, layoutCaselles;
 
-    int contador = 0;
+    int contador = 0, contadorInfo=2;
 
     boolean totes = false;
     boolean precerta = false;
@@ -80,6 +80,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
         ImageButton Siguiente = (ImageButton) findViewById(R.id.imatgeButtonNext);
 
+        ImageView botoInfo = (ImageView) findViewById(R.id.botoInformacio);
+
         //definim imatges
         ImageView imatge = findViewById(R.id.imatgePregunta);
         int orgue = R.drawable.orge;
@@ -102,11 +104,20 @@ public class PreguntesJoc2 extends AppCompatActivity {
         res3.setVisibility(View.INVISIBLE);
         res4.setVisibility(View.INVISIBLE);
 
+        botoInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( PreguntesJoc2.this, PopupInfo.class); //crear intent
+                intent.putExtra("posicio", contadorInfo);
+                startActivity(intent); //executar intent
+            }
+        });
         Siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (Preguntes_RadioButton4_2==true){
                     if (res2.isChecked()) {
+                        contadorInfo=3;
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
 
@@ -122,12 +133,14 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         res3.setText("EL CAMPANAR I ELS GEGATS");
                         //posar imatge nova
                         imatge.setImageDrawable(getResources().getDrawable(orgue));
+
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
                     }
                 } else if (Preguntes_RadioButton1_3==true){
                     if (res2.isChecked()) {
+                        contadorInfo=4;
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
 
@@ -207,6 +220,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         }
                     });
                     if (contador == 4) {
+                        contadorInfo=5;
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
                         Preguntes_Spinner=false;
@@ -226,6 +240,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                     }
                 } else if (Preguntes_CheckBox==true){
                     if (cb3.isChecked() && cb5.isChecked() && cb6.isChecked() && cb7.isChecked() && cb9.isChecked()) {
+                        contadorInfo=6;
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
 
@@ -252,6 +267,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                     }
                 } else if (Preguntes_RadioButton2_4==true) {
                     if (res2.isChecked()) {
+                        contadorInfo=7;
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
 
@@ -277,6 +293,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         Preguntes_RadioButton3_3=false;
 
                         Intent intent = new Intent( PreguntesJoc2.this, finalJoc.class); //crear intent
+                        intent.putExtra("errors", erInt);
+                        intent.putExtra("encerts", enInt);
                         startActivity(intent); //executar intent
                     } else {
                         erInt++;
