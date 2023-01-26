@@ -37,6 +37,8 @@
         <activity
             android:name=".Historia"
             android:exported="true"></activity>
+        <activity
+            android:name=".finalJoc"></activity>
     </application>
 
 </manifest>
