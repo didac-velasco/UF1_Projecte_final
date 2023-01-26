@@ -4,8 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 
+import java.util.ArrayList;
+
 public class PopupInfo extends AppCompatActivity {
 
+    private ArrayList<String> informacio = new ArrayList();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +19,15 @@ public class PopupInfo extends AppCompatActivity {
 
         int ample = mida.widthPixels;
         int altura = mida.heightPixels;
+
+        informacio.add("Aquests carreus donen informació de qui i com s’ha pogut  construir aquest edifici. Els lleons representen la força, el valor i la noblesa i per altra banda veiem l’escut de la ciutat. La gent de la ciutat s’han preocupat per poder-lo construir i hi ha col·laborat en la mesura que a cadascú li era possible.");
+        informacio.add("La ciutat de Valls se sap que ja tenia orgue des de fa molts anys. Quan es va construir aquest edifici ja es va tenir present que n’havia de tenir un i l’any 1590 se sap que ja va sonar per primer cop. L’orgue que podeu veure a la fotografia és el resultat de les restauracions que aquell orgue va anar tenint al llarg dels anys.Durant 346 anys hi va haver un orgue sonant en aquesta nau fins que el 21 de juliol de l’any 1936, amb la guerra civil, va ser destruït. Han passat més de 80 anys fins que no s’ha pogut recuperar un orgue per a la ciutat.");
+        informacio.add("La recuperació de l’orgue ha estat possible gracies al treball constant durant els últims anys d’una Comissió ciutadana formada per persones que estimen la ciutat i la cultura. Tal com es va fer amb la construcció de l'edifici s'ha demanat la col·laboració econòmica dels ciutadans per poder  dur a terme aquest projecte. Tota aquesta gent que han fet possible la construcció de l’instrument que avui visitem són els Padrins de l'orgue. El disseny de la façana està inspirat en elements característics de la ciutat.");
+        informacio.add("L’antic orgue estava situat a la meitat de la nau i suspès dalt d’una balconada tal com podeu veure en les imatges. De vegades els orgues estan situats just damunt la porta d’entrada de l’edifici en la zona de l’anomenat cor. Hi ha diferents tipus d’orgues segons les èpoques, la utilització que se’n feia, els espais on estaven ubicats...");
+        informacio.add("L’orgue és un instrument de vent, això vol dir que el so el produeix l’aire quan vibra en passar pels tubs. Aquest instrument tan gran té unes parts visibles, la façana i la consola, i unes parts que estan a l’interior i que són els mecanismes que fan que l’orgue soni. La consola és el centre de comandament de la persona que toca l’instrument.");
+        informacio.add("Aquest orgue en l’actualitat consta de 1384 tubs però està preparat per a tenir-ne 2504. Cada tecla té associat, com a mínim,  un tub per a cada un dels registres que es puguin activar.Recordeu que la recuperació i construcció ha estat possible gràcies a les donacions de gent particular, empreses de la ciutat i les administracions.Hi ha dos tipus de tubs segons la manera de produir el so: els de boca o labials i els de llengüeta.  També  la mida, la forma i els materials dels que estan fets els tubs donen una sonoritat diferent segons el que es requereix per a cada un dels registres.");
+        informacio.add("Si l’organista activa el registre de trompeta sonaran els tubs que estan modelats per a produir aquest tipus de so. Si activa el registre de gralla sonaran els tubs que estan preparats per a fer-ho i així amb tots els sons. L’organista també pot combinar diferents registres per a tocar alhora. Cada grup de registres està associat a un teclat (manual o pedaler) però l’organista també pot combinar els registres d’un teclat amb els d’un altre.");
+        informacio.add("A partir d'ara la Ciutat comptarà amb un intrument ubicat en aquest espai tan gran i que està pensat que tingui diferents usos: Concerts, acompanyament a la litúrgia i aprenentatge i estudi de l'instrument.");
 
         //mides pop-up
         getWindow().setLayout((int) (ample*0.85), (int) (altura*0.5));

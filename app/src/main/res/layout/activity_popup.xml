@@ -34,7 +34,7 @@
             android:layout_width="310dp"
             android:layout_height="306dp"
             android:layout_gravity="center"
-            android:src="@drawable/orgueVallsTubs" />
+            android:src="@drawable/orge" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
