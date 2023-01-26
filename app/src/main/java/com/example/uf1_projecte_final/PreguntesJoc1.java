@@ -32,7 +32,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
         ImageButton btnimageButton5 = (ImageButton) findViewById(R.id.imageButton5);
         ImageButton btnimageButton6 = (ImageButton) findViewById(R.id.imageButton6);
 
-        EditText encerts = (EditText) findViewById(R.id.idEncerts);
+        EditText encerts = (EditText) findViewById(R.id.idTotalCorrectes);
         EditText errors = (EditText) findViewById(R.id.idErrors);
 
         ImageView botoInfo = (ImageView) findViewById(R.id.botoInformacio);
