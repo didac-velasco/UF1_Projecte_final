@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="Benvinguts a la visita. Aquesta aplicació us anira guiant per a descobrir aquest instrument."
+            android:text=""
             android:textSize="16sp" />
 
         <Space

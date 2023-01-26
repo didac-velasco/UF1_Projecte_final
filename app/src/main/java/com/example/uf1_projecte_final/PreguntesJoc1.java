@@ -25,7 +25,6 @@ public class PreguntesJoc1 extends AppCompatActivity {
         TextView omplirPregunta = findViewById(R.id.textViewPregunta);
         ImageView imatgee = findViewById(R.id.imageView2);
 
-
         ImageButton btnimageButton1 = (ImageButton) findViewById(R.id.imageButton1);
         ImageButton btnimageButton2 = (ImageButton) findViewById(R.id.imageButton2);
         ImageButton btnimageButton3 = (ImageButton) findViewById(R.id.imageButton3);
@@ -50,6 +49,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent( PreguntesJoc1.this, PopupInfo.class); //crear intent
+                intent.putExtra("posicio", contadorPreguntes);
                 startActivity(intent); //executar intent
             }
         });

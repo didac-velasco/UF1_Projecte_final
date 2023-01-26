@@ -212,6 +212,9 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         errors.setText(String.valueOf(erInt));
                     }
                 } else if (Preguntes_RadioButton2_4==true) {
+                    layoutCaselles.setVisibility(View.INVISIBLE);
+                    layoutradiobutton.setVisibility(View.VISIBLE);
+                    layoutrelacio.setVisibility(View.INVISIBLE);
                     preguntaa.setText("QUINA ÉS LA DIFERÈNCIA ENTRE ORGUENER I ORGANISTA?");
                     res1.setText("NO HI HA CAP DIFERÈNCIA, ÉS EL MATEIX.");
                     res2.setText("L’ORGUENER CONSTRUEIX I L’ORGANISTA TOCA.");

@@ -388,7 +388,7 @@
                 android:layout_height="41dp"
                 android:layout_weight="1" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/botoInformacio"
                 android:layout_width="20dp"
                 android:layout_height="40dp"
