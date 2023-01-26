@@ -6,12 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PreguntesJoc2 extends AppCompatActivity {
     Bundle bundle;
@@ -19,15 +22,18 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
     LinearLayout layoutradiobutton, layoutrelacio, layoutCaselles;
 
-    String selec;
+    int contador = 0;
 
-    Object rel1,rel2,rel3,rel4;
+    boolean totes = false;
+    boolean precerta = false;
+    Object rel1, rel2, rel3, rel4;
+
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.joc2);
 
-        bundle=getIntent().getExtras();
+        bundle = getIntent().getExtras();
         erInt = bundle.getInt("errors");
         enInt = bundle.getInt("encerts");
         layoutradiobutton = (LinearLayout) findViewById(R.id.layoutRadioButtons);
@@ -35,25 +41,38 @@ public class PreguntesJoc2 extends AppCompatActivity {
         layoutCaselles = (LinearLayout) findViewById(R.id.layoutCheckbox);
 
         //enviar el menú desplegable Android a Java
-        Spinner desp1=findViewById(R.id.spinner1);
-        Spinner desp2=findViewById(R.id.spinner2);
-        Spinner desp3=findViewById(R.id.spinner3);
-        Spinner desp4=findViewById(R.id.spinner4);
+        Spinner desp1 = findViewById(R.id.spinner1);
+        Spinner desp2 = findViewById(R.id.spinner2);
+        Spinner desp3 = findViewById(R.id.spinner3);
+        Spinner desp4 = findViewById(R.id.spinner4);
 
         //MOSTRAR ELS ELEMENTS DECLARATS DE STRINGS.XML AL DESPLEGABLE
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this, R.array.opcions_desple, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opcions_desple, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
 
         //AQUI DIEM QUIN LAYOUT VOLEM QUE ES VEIGI O NO
+        layoutradiobutton.setVisibility(View.VISIBLE);
         layoutrelacio.setVisibility(View.INVISIBLE);
         layoutCaselles.setVisibility(View.INVISIBLE);
 
         TextView preguntaa = findViewById(R.id.textViewPregunta);
 
+        RadioGroup grup=(RadioGroup) findViewById(R.id.radiogroup);
+
         RadioButton res1 = (RadioButton) findViewById(R.id.rb1);
         RadioButton res2 = (RadioButton) findViewById(R.id.rb2);
         RadioButton res3 = (RadioButton) findViewById(R.id.rb3);
         RadioButton res4 = (RadioButton) findViewById(R.id.rb4);
+
+        CheckBox cb1 = (CheckBox) findViewById(R.id.checkBox1);
+        CheckBox cb2 = (CheckBox) findViewById(R.id.checkBox2);
+        CheckBox cb3 = (CheckBox) findViewById(R.id.checkBox3);
+        CheckBox cb4 = (CheckBox) findViewById(R.id.checkBox4);
+        CheckBox cb5 = (CheckBox) findViewById(R.id.checkBox5);
+        CheckBox cb6 = (CheckBox) findViewById(R.id.checkBox6);
+        CheckBox cb7 = (CheckBox) findViewById(R.id.checkBox7);
+        CheckBox cb8 = (CheckBox) findViewById(R.id.checkBox8);
+        CheckBox cb9 = (CheckBox) findViewById(R.id.checkBox9);
 
         ImageButton Siguiente = (ImageButton) findViewById(R.id.imatgeButtonNext);
 
@@ -66,8 +85,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
         preguntaa.setText("OBSERVEU BÉ LA IMATGE I RESPONEU");
         res1.setText("ESTÀ ARRAN DE TERRA");
         res2.setText("ESTÀ SUSPÉS EN UNA BALCONADA");
-        res3.setText("");
-        res4.setText("");
+        res3.setVisibility(View.INVISIBLE);
+        res4.setVisibility(View.INVISIBLE);
 
         Siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,16 +94,13 @@ public class PreguntesJoc2 extends AppCompatActivity {
                 if (res2.isChecked()) {
                     enInt++;
                     encerts.setText(String.valueOf(enInt));
-
+                    res3.setVisibility(View.VISIBLE);
                     preguntaa.setText("QUINA ÉS LA RELACIÓ ENTRE EL DISSENY DE LA FAÇANA DEL NOU ORGUE I LA CIUTAT DE VALLS?");
                     res1.setText("ELS CALÇOTS I ELS CASTELLS");
                     res2.setText("ELS CASTELLS I EL CAMPANAR");
-                    res3.setText("EL CAMPANAR I ELS GEGANTS");
+                    res3.setText("EL CAMPANAR I ELS GEGATS");
 
                     if (res2.isChecked()) {
-                        enInt++;
-                        encerts.setText(String.valueOf(enInt));
-
                         //AQUI DIEM QUIN LAYOUT VOLEM QUE ES VEIGI O NO
                         layoutradiobutton.setVisibility(View.INVISIBLE);
                         layoutCaselles.setVisibility(View.INVISIBLE);
@@ -93,62 +109,107 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         preguntaa.setText("LLEGIU I RELACIONEU CADA TIPUS D’ORGUE AMB LA DEFINICIÓ QUE CREIEU QUE LI CORRESPON.");
 
                         desp1.setAdapter(adapter);
+                        desp2.setAdapter(adapter);
+                        desp3.setAdapter(adapter);
+                        desp4.setAdapter(adapter);
                         //AGAFEM LA POSICIÓ DE L'OPCÓ ESCOLLIDA DEL DESPLEGABLE AMB EL setOnItemSelectedListener
                         desp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
                             //S'HA TRIAT UNA OPCIÓ
                             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                                 //AGAFEM LA POSICIÓ
                                 rel1 = parent.getItemAtPosition(position);
+                                if (rel1.toString().equals("B- ES PORTA A SOBRE MENTRE E TOCA")) {
+                                    contador = contador + 1;
+                                }
                             }
+
                             public void onNothingSelected(AdapterView<?> parent) {
 
                             }
                         });
 
-                        desp2.setAdapter(adapter);
                         desp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                                 rel2 = parent.getItemAtPosition(position);
+                                if (rel2.toString().equals("C- ES POT POSAR A DIFERENTS LLOCS")) {
+                                    contador = contador + 1;
+                                }
                             }
+
                             public void onNothingSelected(AdapterView<?> parent) {
 
                             }
                         });
-                        desp3.setAdapter(adapter);
+
                         desp3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                                 rel3 = parent.getItemAtPosition(position);
+                                if (rel3.toString().equals("A- TÉ NOMÉS UN TECLAT PERÒ JA TÉ DIMENSIONS CONSIDERABLES")) {
+                                    contador = contador + 1;
+                                }
                             }
+
                             public void onNothingSelected(AdapterView<?> parent) {
 
                             }
                         });
-                        desp4.setAdapter(adapter);
+
                         desp4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                                 rel4 = parent.getItemAtPosition(position);
+                                if (rel4.toString().equals("D- TÉ MILERS DE TUBS I NECESSITA UN ESPAI GRAN PER A POSAR-LO")) {
+                                    contador = contador + 1;
+                                }
                             }
+
                             public void onNothingSelected(AdapterView<?> parent) {
 
                             }
                         });
-                        //&& desp2.equals(3) && desp3.equals(1) && desp4.equals(4)
-                        /*if(rel1.equals()){
+                        if (contador == 4) {
                             enInt++;
                             encerts.setText(String.valueOf(enInt));
 
-                            layoutCaselles.setVisibility(View.VISIBLE);
-                            layoutradiobutton.setVisibility(View.INVISIBLE);
+                            layoutCaselles.setVisibility(View.INVISIBLE);
+                            layoutradiobutton.setVisibility(View.VISIBLE);
                             layoutrelacio.setVisibility(View.INVISIBLE);
 
                             preguntaa.setText("MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
 
-                        }*/
-                    }
+                            if (cb3.isChecked() && cb5.isChecked() && cb6.isChecked() && cb7.isChecked() && cb9.isChecked()) {
+                                enInt++;
+                                encerts.setText(String.valueOf(enInt));
 
-                } else {
-                    erInt++;
-                    errors.setText(String.valueOf(erInt));
+                                preguntaa.setText("QUINA ÉS LA DIFERÈNCIA ENTRE ORGUENER I ORGANISTA?");
+                                res1.setText("NO HI HA CAP DIFERÈNCIA, ÉS EL MATEIX.");
+                                res2.setText("L’ORGUENER CONSTRUEIX I L’ORGANISTA TOCA.");
+                                res3.setVisibility(View.VISIBLE);
+                                res3.setText("L’ORGANISTA CONSTRUEIX I L’ORGUENER TOCA.");
+                                res4.setVisibility(View.VISIBLE);
+                                res4.setText("L’ORGUENER TOCA MOLT I L’ORGANISTA NO TOCA GAIRE.");
+
+                                if (res2.isChecked()){
+                                    enInt++;
+                                    encerts.setText(String.valueOf(enInt));
+
+                                    preguntaa.setText("HEU RECORDAT DE COMPTAR ELS ESCUTS DE LA CIUTAT? QUANTS ESCUTS DE LA CIUTAT HAS POGUT COMPTABILITZAR AL LLARG DE LA VISITA?");
+                                    res1.setText("ENTRE 10 I 20");
+                                    res2.setText("ENTRE 21 I 40");
+                                    res3.setText("MÉS DE 40");
+                                    res4.setVisibility(View.INVISIBLE);
+                                }
+
+                            }else {
+                                erInt++;
+                                errors.setText(String.valueOf(erInt));
+                            }
+                        }
+
+                    } else {
+                        erInt++;
+                        errors.setText(String.valueOf(erInt));
+                    }
                 }
             }
         });
