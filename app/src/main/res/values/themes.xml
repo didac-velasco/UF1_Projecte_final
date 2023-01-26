@@ -1,10 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.UF1_Projecte_final" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.UF1_Projecte_final" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
         <item name="colorAccent">@color/teal_200</item>
         <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.UF1_Projecte_final.TemaPopup">
+        <item name="android:windowIsFloating">true</item> <!--posar una petita sombra -->
+        <!--<item name="android:windowIsTranslucent">true</item> treure fons negre -->
+        <item name="android:windowCloseOnTouchOutside">true</item> <!--tancar quan cliquem fora del quadre -->
+        <item name="android:windowBackground">@color/transparente</item>
     </style>
 </resources>

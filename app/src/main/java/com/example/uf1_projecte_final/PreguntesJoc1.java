@@ -38,11 +38,21 @@ public class PreguntesJoc1 extends AppCompatActivity {
 
         ImageButton btnanterior = (ImageButton) findViewById(R.id.btAnterior);
 
+        ImageView botoInfo = (ImageView) findViewById(R.id.botoInformacio);
+
         //afegim preguntes a la llista
         preguntesArray.add("BUSQUEU AQUEST CARREU I SITUEU-LO AL PLÀNOL. (CAL RESPONDRE PER AVANÇAR");
         preguntesArray.add("SEGONS LA IMATGE, ON CREIEU QUE ESTAVA SITUAT L'ORGUE ANTERIOR? SITUEU-LO AL PLÀNOL");
 
         omplirPregunta.setText(preguntesArray.get(0));
+
+        botoInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent( PreguntesJoc1.this, Popup.class); //crear intent
+                startActivity(intent); //executar intent
+            }
+        });
 
         btnanterior.setOnClickListener(new View.OnClickListener() {
             @Override
