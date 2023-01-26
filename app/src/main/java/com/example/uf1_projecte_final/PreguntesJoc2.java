@@ -157,11 +157,20 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         preguntaa.setText("LLEGIU I RELACIONEU CADA TIPUS D’ORGUE AMB LA DEFINICIÓ QUE CREIEU QUE LI CORRESPON.");
                         //posar imatge nova
                         imatge.setImageDrawable(getResources().getDrawable(tiposorgue));
+
+                        //CANVIAR IMATGE BOTO SEGÜENT
+                        Siguiente.setImageResource(R.drawable.opcions);
+
+
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
                     }
+
                 } else if (Preguntes_Spinner==true) {
+                    erInt--;
+                    errors.setText(String.valueOf(erInt));
+                    Siguiente.setImageResource(R.drawable.next);
                     desp1.setAdapter(adapter);
                     desp2.setAdapter(adapter);
                     desp3.setAdapter(adapter);

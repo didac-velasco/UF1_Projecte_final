@@ -35,8 +35,6 @@ public class PreguntesJoc1 extends AppCompatActivity {
         EditText encerts = (EditText) findViewById(R.id.idEncerts);
         EditText errors = (EditText) findViewById(R.id.idErrors);
 
-        ImageButton btnanterior = (ImageButton) findViewById(R.id.btAnterior);
-
         ImageView botoInfo = (ImageView) findViewById(R.id.botoInformacio);
 
         //definim imatges
@@ -57,21 +55,6 @@ public class PreguntesJoc1 extends AppCompatActivity {
             }
         });
 
-        btnanterior.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (idPregunta>0){
-                    contadorPreguntes--;
-                    idPregunta--;
-                    encertsInt--;
-                    omplirPregunta.setText(preguntesArray.get(idPregunta));
-                } else {
-                    encertsInt=0;
-                    Toast.makeText(getApplicationContext(), "No hi han més preguntes!", Toast.LENGTH_SHORT).show();
-                }
-                encerts.setText(String.valueOf(encertsInt));
-            }
-        });
         btnimageButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

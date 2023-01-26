@@ -163,21 +163,8 @@
             android:orientation="horizontal">
 
             <Space
-                android:layout_width="28dp"
-                android:layout_height="41dp"
-                android:layout_weight="1" />
-
-            <ImageButton
-                android:id="@+id/btAnterior"
-                android:layout_width="20dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="#DC6C3F"
-                app:srcCompat="@android:drawable/ic_media_rew" />
-
-            <Space
                 android:layout_width="wrap_content"
-                android:layout_height="41dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <ImageView
@@ -187,11 +174,6 @@
                 android:layout_weight="1"
                 android:background="#DC6C3F"
                 app:srcCompat="@android:drawable/ic_menu_info_details" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <Space
                 android:layout_width="wrap_content"
