@@ -49,66 +49,267 @@
             android:layout_width="match_parent"
             android:layout_height="34dp" />
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="294dp">
 
-            <RadioGroup
+            <LinearLayout
+                android:id="@+id/layoutRadioButtons"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/rb1"
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/rb1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#66000000"
+                        android:buttonTint="#DC6C3F"
+                        android:text="RadioButto"
+                        android:textColor="#F6F8F5" />
+
+                    <RadioButton
+                        android:id="@+id/rb2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#66000000"
+                        android:buttonTint="#DC6C3F"
+                        android:text="RadioButton"
+                        android:textColor="#F6F8F5" />
+
+                    <RadioButton
+                        android:id="@+id/rb3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#66000000"
+                        android:buttonTint="#DC6C3F"
+                        android:text="RadioButton"
+                        android:textColor="#F6F8F5" />
+
+                    <RadioButton
+                        android:id="@+id/rb4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#66000000"
+                        android:buttonTint="#DC6C3F"
+                        android:text="RadioButton"
+                        android:textColor="#F8F5F5" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutrelacionar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tipusorgue1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="#66000000"
+                            android:text="1- ORGUE PORTATIU"
+                            android:textColor="#F6F1F1"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner1"
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:background="#DC6C3F" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tipusorgue2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="#66000000"
+                            android:text="2- ORGUE POSITIU"
+                            android:textColor="#FAF7F7"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner2"
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="#DC6C3F" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tipusorgue3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="#66000000"
+                            android:text="3- ORGUE PRINCIPAL"
+                            android:textColor="#FFFEFE"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner3"
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="#DC6C3F" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tipusorgue4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="#66000000"
+                            android:text="4- GRAN ORGUE"
+                            android:textColor="#FBFBFB"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/spinner4"
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="#DC6C3F" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#66000000"
+                    android:layout_marginLeft="100dp"
                     android:buttonTint="#DC6C3F"
-                    android:text="RadioButto"
-                    android:textColor="#F6F8F5" />
+                    android:text="BARNILLES"
+                    android:textColor="#FDFBFB" />
 
-                <RadioButton
-                    android:id="@+id/rb2"
+                <CheckBox
+                    android:id="@+id/checkBox2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#66000000"
+                    android:layout_marginLeft="100dp"
                     android:buttonTint="#DC6C3F"
-                    android:text="RadioButton"
-                    android:textColor="#F6F8F5" />
+                    android:text="CAIXA DE L’EXPRESSIU"
+                    android:textColor="#FDFBFB"/>
 
-                <RadioButton
-                    android:id="@+id/rb3"
+                <CheckBox
+                    android:id="@+id/checkBox3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#66000000"
+                    android:layout_marginLeft="100dp"
                     android:buttonTint="#DC6C3F"
-                    android:text="RadioButton"
-                    android:textColor="#F6F8F5" />
+                    android:text="MANUALS"
+                    android:textColor="#FDFBFB" />
 
-                <RadioButton
-                    android:id="@+id/rb4"
+                <CheckBox
+                    android:id="@+id/checkBox4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginRight="20dp"
-                    android:background="#66000000"
+                    android:layout_marginLeft="100dp"
                     android:buttonTint="#DC6C3F"
-                    android:text="RadioButton"
-                    android:textColor="#F8F5F5" />
+                    android:text="MANXES"
+                    android:textColor="#FDFBFB"/>
 
-            </RadioGroup>
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:buttonTint="#DC6C3F"
+                    android:text="PEDAL DE L’EXPRESSIU "
+                    android:textColor="#FDFBFB"/>
 
-        </LinearLayout>
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:buttonTint="#DC6C3F"
+                    android:text="PEDALER"
+                    android:textColor="#FDFBFB"/>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="169dp" />
+                <CheckBox
+                    android:id="@+id/checkBox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:buttonTint="#DC6C3F"
+                    android:text="POMS DELS REGISTRES"
+                    android:textColor="#FDFBFB"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:buttonTint="#DC6C3F"
+                    android:text="SECRET"
+                    android:textColor="#FDFBFB"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:buttonTint="#DC6C3F"
+                    android:text="TUBS"
+                    android:textColor="#FDFBFB" />
+            </LinearLayout>
+
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -132,11 +333,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:enabled="false"
                 android:gravity="center"
                 android:inputType="number"
                 android:text="0"
                 android:textColor="#68F106"
-                android:enabled="false"
                 tools:text="0" />
 
             <TextView
@@ -155,10 +356,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:enabled="false"
                 android:gravity="center"
                 android:inputType="number"
                 android:text="0"
-                android:enabled="false"
                 android:textColor="#F30303" />
         </LinearLayout>
 

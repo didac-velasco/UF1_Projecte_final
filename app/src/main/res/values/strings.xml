@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">UF1_Projecte_final</string>
+    <string-array name="opcions_desple">
+        <item>ESCULL UNA OPCIÓ  ▿</item>
+        <item>A- TÉ NOMÉS UN TECLAT PERÒ JA TÉ DIMENSIONS CONSIDERABLES</item>
+        <item>B- ES PORTA A SOBRE MENTRE E TOCA</item>
+        <item>C- ES POT POSAR A DIFERENTS LLOCS</item>
+        <item>D- TÉ MILERS DE TUBS I NECESSITA UN ESPAI GRAN PER A POSAR-LO</item>
+    </string-array>
 </resources>
