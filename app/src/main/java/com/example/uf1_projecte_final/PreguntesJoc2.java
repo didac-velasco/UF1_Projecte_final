@@ -28,7 +28,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
     boolean precerta = false;
     Object rel1, rel2, rel3, rel4;
 
-    Boolean Preguntes_RadioButton1_3 = true;
+    Boolean Preguntes_RadioButton4_2 = true;
+    Boolean Preguntes_RadioButton1_3 = false;
     Boolean Preguntes_Spinner = false;
     Boolean Preguntes_CheckBox = false;
     Boolean Preguntes_RadioButton2_4 = false;
@@ -94,15 +95,25 @@ public class PreguntesJoc2 extends AppCompatActivity {
         Siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Preguntes_RadioButton1_3==true){
+                if (Preguntes_RadioButton4_2==true){
                     if (res2.isChecked()) {
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
-                        res3.setVisibility(View.VISIBLE);
-                        preguntaa.setText("QUINA ÉS LA RELACIÓ ENTRE EL DISSENY DE LA FAÇANA DEL NOU ORGUE I LA CIUTAT DE VALLS?");
-                        res1.setText("ELS CALÇOTS I ELS CASTELLS");
-                        res2.setText("ELS CASTELLS I EL CAMPANAR");
-                        res3.setText("EL CAMPANAR I ELS GEGATS");
+                        Preguntes_RadioButton1_3 = true;
+                        Preguntes_RadioButton4_2 = false;
+                    } else {
+                        erInt++;
+                        errors.setText(String.valueOf(erInt));
+                    }
+                } else if (Preguntes_RadioButton1_3==true){
+                    res3.setVisibility(View.VISIBLE);
+                    preguntaa.setText("QUINA ÉS LA RELACIÓ ENTRE EL DISSENY DE LA FAÇANA DEL NOU ORGUE I LA CIUTAT DE VALLS?");
+                    res1.setText("ELS CALÇOTS I ELS CASTELLS");
+                    res2.setText("ELS CASTELLS I EL CAMPANAR");
+                    res3.setText("EL CAMPANAR I ELS GEGATS");
+                    if (res2.isChecked()) {
+                        enInt++;
+                        encerts.setText(String.valueOf(enInt));
                         Preguntes_RadioButton1_3 = false;
                         Preguntes_Spinner = true;
                     } else {
@@ -110,73 +121,71 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         errors.setText(String.valueOf(erInt));
                     }
                 } else if (Preguntes_Spinner==true) {
-                    if (res2.isChecked()) {
-                        //AQUI DIEM QUIN LAYOUT VOLEM QUE ES VEIGI O NO
-                        layoutradiobutton.setVisibility(View.INVISIBLE);
-                        layoutCaselles.setVisibility(View.INVISIBLE);
-                        layoutrelacio.setVisibility(View.VISIBLE);
+                    //AQUI DIEM QUIN LAYOUT VOLEM QUE ES VEIGI O NO
+                    layoutradiobutton.setVisibility(View.INVISIBLE);
+                    layoutCaselles.setVisibility(View.INVISIBLE);
+                    layoutrelacio.setVisibility(View.VISIBLE);
 
-                        preguntaa.setText("LLEGIU I RELACIONEU CADA TIPUS D’ORGUE AMB LA DEFINICIÓ QUE CREIEU QUE LI CORRESPON.");
+                    preguntaa.setText("LLEGIU I RELACIONEU CADA TIPUS D’ORGUE AMB LA DEFINICIÓ QUE CREIEU QUE LI CORRESPON.");
 
-                        desp1.setAdapter(adapter);
-                        desp2.setAdapter(adapter);
-                        desp3.setAdapter(adapter);
-                        desp4.setAdapter(adapter);
-                        //AGAFEM LA POSICIÓ DE L'OPCÓ ESCOLLIDA DEL DESPLEGABLE AMB EL setOnItemSelectedListener
-                        desp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    desp1.setAdapter(adapter);
+                    desp2.setAdapter(adapter);
+                    desp3.setAdapter(adapter);
+                    desp4.setAdapter(adapter);
+                    //AGAFEM LA POSICIÓ DE L'OPCÓ ESCOLLIDA DEL DESPLEGABLE AMB EL setOnItemSelectedListener
+                    desp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
-                            //S'HA TRIAT UNA OPCIÓ
-                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                //AGAFEM LA POSICIÓ
-                                rel1 = parent.getItemAtPosition(position);
-                                if (rel1.toString().equals("B- ES PORTA A SOBRE MENTRE E TOCA")) {
-                                    contador = contador + 1;
-                                }
+                        //S'HA TRIAT UNA OPCIÓ
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            //AGAFEM LA POSICIÓ
+                            rel1 = parent.getItemAtPosition(position);
+                            if (rel1.toString().equals("B- ES PORTA A SOBRE MENTRE E TOCA")) {
+                                contador = contador + 1;
                             }
-                            public void onNothingSelected(AdapterView<?> parent) {
+                        }
+                        public void onNothingSelected(AdapterView<?> parent) {
 
+                        }
+                    });
+
+                    desp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            rel2 = parent.getItemAtPosition(position);
+                            if (rel2.toString().equals("C- ES POT POSAR A DIFERENTS LLOCS")) {
+                                contador = contador + 1;
                             }
-                        });
+                        }
 
-                        desp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                rel2 = parent.getItemAtPosition(position);
-                                if (rel2.toString().equals("C- ES POT POSAR A DIFERENTS LLOCS")) {
-                                    contador = contador + 1;
-                                }
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+
+                    desp3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            rel3 = parent.getItemAtPosition(position);
+                            if (rel3.toString().equals("A- TÉ NOMÉS UN TECLAT PERÒ JA TÉ DIMENSIONS CONSIDERABLES")) {
+                                contador = contador + 1;
                             }
+                        }
 
-                            public void onNothingSelected(AdapterView<?> parent) {
+                        public void onNothingSelected(AdapterView<?> parent) {
 
+                        }
+                    });
+
+                    desp4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            rel4 = parent.getItemAtPosition(position);
+                            if (rel4.toString().equals("D- TÉ MILERS DE TUBS I NECESSITA UN ESPAI GRAN PER A POSAR-LO")) {
+                                contador = contador + 1;
                             }
-                        });
+                        }
 
-                        desp3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                rel3 = parent.getItemAtPosition(position);
-                                if (rel3.toString().equals("A- TÉ NOMÉS UN TECLAT PERÒ JA TÉ DIMENSIONS CONSIDERABLES")) {
-                                    contador = contador + 1;
-                                }
-                            }
+                        public void onNothingSelected(AdapterView<?> parent) {
 
-                            public void onNothingSelected(AdapterView<?> parent) {
-
-                            }
-                        });
-
-                        desp4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                rel4 = parent.getItemAtPosition(position);
-                                if (rel4.toString().equals("D- TÉ MILERS DE TUBS I NECESSITA UN ESPAI GRAN PER A POSAR-LO")) {
-                                    contador = contador + 1;
-                                }
-                            }
-
-                            public void onNothingSelected(AdapterView<?> parent) {
-
-                            }
-                        });
-                    }
+                        }
+                    });
                     if (contador == 4) {
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
@@ -187,8 +196,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         errors.setText(String.valueOf(erInt));
                     }
                 } else if (Preguntes_CheckBox==true){
-                    layoutCaselles.setVisibility(View.INVISIBLE);
-                    layoutradiobutton.setVisibility(View.VISIBLE);
+                    layoutCaselles.setVisibility(View.VISIBLE);
+                    layoutradiobutton.setVisibility(View.INVISIBLE);
                     layoutrelacio.setVisibility(View.INVISIBLE);
 
                     preguntaa.setText("MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
