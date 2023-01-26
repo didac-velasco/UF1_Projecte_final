@@ -159,21 +159,19 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
                         //CANVIAR IMATGE BOTO SEGÜENT
                         Siguiente.setImageResource(R.drawable.opcions);
-
-
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
                     }
 
                 } else if (Preguntes_Spinner==true) {
-                    erInt--;
-                    errors.setText(String.valueOf(erInt));
                     Siguiente.setImageResource(R.drawable.next);
                     desp1.setAdapter(adapter);
                     desp2.setAdapter(adapter);
                     desp3.setAdapter(adapter);
                     desp4.setAdapter(adapter);
+                    erInt=erInt-4;
+                    errors.setText(String.valueOf(erInt));
                     //AGAFEM LA POSICIÓ DE L'OPCÓ ESCOLLIDA DEL DESPLEGABLE AMB EL setOnItemSelectedListener
                     desp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -183,6 +181,10 @@ public class PreguntesJoc2 extends AppCompatActivity {
                             rel1 = parent.getItemAtPosition(position);
                             if (rel1.toString().equals("B- ES PORTA A SOBRE MENTRE E TOCA")) {
                                 contador = contador + 1;
+                            } else {
+                                erInt++;
+                                errors.setText(String.valueOf(erInt));
+                                contador=0;
                             }
                         }
                         public void onNothingSelected(AdapterView<?> parent) {
@@ -195,6 +197,10 @@ public class PreguntesJoc2 extends AppCompatActivity {
                             rel2 = parent.getItemAtPosition(position);
                             if (rel2.toString().equals("C- ES POT POSAR A DIFERENTS LLOCS")) {
                                 contador = contador + 1;
+                            } else {
+                                erInt++;
+                                errors.setText(String.valueOf(erInt));
+                                contador=0;
                             }
                         }
 
@@ -208,6 +214,10 @@ public class PreguntesJoc2 extends AppCompatActivity {
                             rel3 = parent.getItemAtPosition(position);
                             if (rel3.toString().equals("A- TÉ NOMÉS UN TECLAT PERÒ JA TÉ DIMENSIONS CONSIDERABLES")) {
                                 contador = contador + 1;
+                            } else {
+                                erInt++;
+                                errors.setText(String.valueOf(erInt));
+                                contador=0;
                             }
                         }
 
@@ -221,6 +231,10 @@ public class PreguntesJoc2 extends AppCompatActivity {
                             rel4 = parent.getItemAtPosition(position);
                             if (rel4.toString().equals("D- TÉ MILERS DE TUBS I NECESSITA UN ESPAI GRAN PER A POSAR-LO")) {
                                 contador = contador + 1;
+                            } else {
+                                erInt++;
+                                errors.setText(String.valueOf(erInt));
+                                contador=0;
                             }
                         }
                         public void onNothingSelected(AdapterView<?> parent) {
@@ -241,10 +255,6 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         preguntaa.setText("MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
                         //posar imatge nova
                         imatge.setImageDrawable(getResources().getDrawable(partsorgue));
-                    } else {
-                        erInt++;
-                        errors.setText(String.valueOf(erInt));
-                        contador=0;
                     }
                 } else if (Preguntes_CheckBox==true){
                     if (cb3.isChecked() && cb5.isChecked() && cb6.isChecked() && cb7.isChecked() && cb9.isChecked()) {
