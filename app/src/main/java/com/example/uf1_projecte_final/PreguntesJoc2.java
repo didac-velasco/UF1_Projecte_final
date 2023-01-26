@@ -16,7 +16,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class PreguntesJoc2 extends AppCompatActivity {
     Bundle bundle;
@@ -90,7 +89,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
         int teclat = R.drawable.teclat;
         int escuts = R.drawable.escuts;
 
-        EditText encerts = (EditText) findViewById(R.id.idEncerts);
+        EditText encerts = (EditText) findViewById(R.id.idTotalCorrectes);
         EditText errors = (EditText) findViewById(R.id.idErrors);
 
         encerts.setText(String.valueOf(enInt));
