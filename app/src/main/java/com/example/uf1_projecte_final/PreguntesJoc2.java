@@ -28,6 +28,11 @@ public class PreguntesJoc2 extends AppCompatActivity {
     boolean precerta = false;
     Object rel1, rel2, rel3, rel4;
 
+    Boolean Preguntes_RadioButton1_3 = true;
+    Boolean Preguntes_Spinner = false;
+    Boolean Preguntes_CheckBox = false;
+    Boolean Preguntes_RadioButton2_4 = false;
+    Boolean Preguntes_RadioButton3_3 = false;
     @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,14 +69,10 @@ public class PreguntesJoc2 extends AppCompatActivity {
         RadioButton res3 = (RadioButton) findViewById(R.id.rb3);
         RadioButton res4 = (RadioButton) findViewById(R.id.rb4);
 
-        CheckBox cb1 = (CheckBox) findViewById(R.id.checkBox1);
-        CheckBox cb2 = (CheckBox) findViewById(R.id.checkBox2);
         CheckBox cb3 = (CheckBox) findViewById(R.id.checkBox3);
-        CheckBox cb4 = (CheckBox) findViewById(R.id.checkBox4);
         CheckBox cb5 = (CheckBox) findViewById(R.id.checkBox5);
         CheckBox cb6 = (CheckBox) findViewById(R.id.checkBox6);
         CheckBox cb7 = (CheckBox) findViewById(R.id.checkBox7);
-        CheckBox cb8 = (CheckBox) findViewById(R.id.checkBox8);
         CheckBox cb9 = (CheckBox) findViewById(R.id.checkBox9);
 
         ImageButton Siguiente = (ImageButton) findViewById(R.id.imatgeButtonNext);
@@ -82,6 +83,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
         encerts.setText(String.valueOf(enInt));
         errors.setText(String.valueOf(erInt));
 
+
+
         preguntaa.setText("OBSERVEU BÉ LA IMATGE I RESPONEU");
         res1.setText("ESTÀ ARRAN DE TERRA");
         res2.setText("ESTÀ SUSPÉS EN UNA BALCONADA");
@@ -91,15 +94,22 @@ public class PreguntesJoc2 extends AppCompatActivity {
         Siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (res2.isChecked()) {
-                    enInt++;
-                    encerts.setText(String.valueOf(enInt));
-                    res3.setVisibility(View.VISIBLE);
-                    preguntaa.setText("QUINA ÉS LA RELACIÓ ENTRE EL DISSENY DE LA FAÇANA DEL NOU ORGUE I LA CIUTAT DE VALLS?");
-                    res1.setText("ELS CALÇOTS I ELS CASTELLS");
-                    res2.setText("ELS CASTELLS I EL CAMPANAR");
-                    res3.setText("EL CAMPANAR I ELS GEGATS");
-
+                if (Preguntes_RadioButton1_3==true){
+                    if (res2.isChecked()) {
+                        enInt++;
+                        encerts.setText(String.valueOf(enInt));
+                        res3.setVisibility(View.VISIBLE);
+                        preguntaa.setText("QUINA ÉS LA RELACIÓ ENTRE EL DISSENY DE LA FAÇANA DEL NOU ORGUE I LA CIUTAT DE VALLS?");
+                        res1.setText("ELS CALÇOTS I ELS CASTELLS");
+                        res2.setText("ELS CASTELLS I EL CAMPANAR");
+                        res3.setText("EL CAMPANAR I ELS GEGATS");
+                        Preguntes_RadioButton1_3 = false;
+                        Preguntes_Spinner = true;
+                    } else {
+                        erInt++;
+                        errors.setText(String.valueOf(erInt));
+                    }
+                } else if (Preguntes_Spinner==true) {
                     if (res2.isChecked()) {
                         //AQUI DIEM QUIN LAYOUT VOLEM QUE ES VEIGI O NO
                         layoutradiobutton.setVisibility(View.INVISIBLE);
@@ -123,7 +133,6 @@ public class PreguntesJoc2 extends AppCompatActivity {
                                     contador = contador + 1;
                                 }
                             }
-
                             public void onNothingSelected(AdapterView<?> parent) {
 
                             }
@@ -167,45 +176,61 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
                             }
                         });
-                        if (contador == 4) {
-                            enInt++;
-                            encerts.setText(String.valueOf(enInt));
+                    }
+                    if (contador == 4) {
+                        enInt++;
+                        encerts.setText(String.valueOf(enInt));
+                        Preguntes_Spinner=false;
+                        Preguntes_CheckBox=true;
+                    } else {
+                        erInt++;
+                        errors.setText(String.valueOf(erInt));
+                    }
+                } else if (Preguntes_CheckBox==true){
+                    layoutCaselles.setVisibility(View.INVISIBLE);
+                    layoutradiobutton.setVisibility(View.VISIBLE);
+                    layoutrelacio.setVisibility(View.INVISIBLE);
 
-                            layoutCaselles.setVisibility(View.INVISIBLE);
-                            layoutradiobutton.setVisibility(View.VISIBLE);
-                            layoutrelacio.setVisibility(View.INVISIBLE);
+                    preguntaa.setText("MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
 
-                            preguntaa.setText("MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
+                    if (cb3.isChecked() && cb5.isChecked() && cb6.isChecked() && cb7.isChecked() && cb9.isChecked()) {
+                        enInt++;
+                        encerts.setText(String.valueOf(enInt));
+                        Preguntes_CheckBox=false;
+                        Preguntes_RadioButton2_4=true;
+                    } else {
+                        erInt++;
+                        errors.setText(String.valueOf(erInt));
+                    }
+                } else if (Preguntes_RadioButton2_4==true) {
+                    preguntaa.setText("QUINA ÉS LA DIFERÈNCIA ENTRE ORGUENER I ORGANISTA?");
+                    res1.setText("NO HI HA CAP DIFERÈNCIA, ÉS EL MATEIX.");
+                    res2.setText("L’ORGUENER CONSTRUEIX I L’ORGANISTA TOCA.");
+                    res3.setVisibility(View.VISIBLE);
+                    res3.setText("L’ORGANISTA CONSTRUEIX I L’ORGUENER TOCA.");
+                    res4.setVisibility(View.VISIBLE);
+                    res4.setText("L’ORGUENER TOCA MOLT I L’ORGANISTA NO TOCA GAIRE.");
 
-                            if (cb3.isChecked() && cb5.isChecked() && cb6.isChecked() && cb7.isChecked() && cb9.isChecked()) {
-                                enInt++;
-                                encerts.setText(String.valueOf(enInt));
+                    if (res2.isChecked()) {
+                        enInt++;
+                        encerts.setText(String.valueOf(enInt));
+                        Preguntes_RadioButton2_4=false;
+                        Preguntes_RadioButton3_3=true;
+                    } else {
+                        erInt++;
+                        errors.setText(String.valueOf(erInt));
+                    }
+                } else if (Preguntes_RadioButton3_3=true){
+                    preguntaa.setText("HEU RECORDAT DE COMPTAR ELS ESCUTS DE LA CIUTAT? QUANTS ESCUTS DE LA CIUTAT HAS POGUT COMPTABILITZAR AL LLARG DE LA VISITA?");
+                    res1.setText("ENTRE 10 I 20");
+                    res2.setText("ENTRE 21 I 40");
+                    res3.setText("MÉS DE 40");
+                    res4.setVisibility(View.INVISIBLE);
 
-                                preguntaa.setText("QUINA ÉS LA DIFERÈNCIA ENTRE ORGUENER I ORGANISTA?");
-                                res1.setText("NO HI HA CAP DIFERÈNCIA, ÉS EL MATEIX.");
-                                res2.setText("L’ORGUENER CONSTRUEIX I L’ORGANISTA TOCA.");
-                                res3.setVisibility(View.VISIBLE);
-                                res3.setText("L’ORGANISTA CONSTRUEIX I L’ORGUENER TOCA.");
-                                res4.setVisibility(View.VISIBLE);
-                                res4.setText("L’ORGUENER TOCA MOLT I L’ORGANISTA NO TOCA GAIRE.");
-
-                                if (res2.isChecked()){
-                                    enInt++;
-                                    encerts.setText(String.valueOf(enInt));
-
-                                    preguntaa.setText("HEU RECORDAT DE COMPTAR ELS ESCUTS DE LA CIUTAT? QUANTS ESCUTS DE LA CIUTAT HAS POGUT COMPTABILITZAR AL LLARG DE LA VISITA?");
-                                    res1.setText("ENTRE 10 I 20");
-                                    res2.setText("ENTRE 21 I 40");
-                                    res3.setText("MÉS DE 40");
-                                    res4.setVisibility(View.INVISIBLE);
-                                }
-
-                            }else {
-                                erInt++;
-                                errors.setText(String.valueOf(erInt));
-                            }
-                        }
-
+                    if (res3.isChecked()) {
+                        enInt++;
+                        encerts.setText(String.valueOf(enInt));
+                        Preguntes_RadioButton3_3=false;
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
