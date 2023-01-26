@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -79,6 +80,14 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
         ImageButton Siguiente = (ImageButton) findViewById(R.id.imatgeButtonNext);
 
+        //definim imatges
+        ImageView imatge = findViewById(R.id.imatgePregunta);
+        int orgue = R.drawable.orge;
+        int tiposorgue = R.drawable.tiposorgue;
+        int partsorgue = R.drawable.partsorgue;
+        int teclat = R.drawable.teclat;
+        int escuts = R.drawable.escuts;
+
         EditText encerts = (EditText) findViewById(R.id.idEncerts);
         EditText errors = (EditText) findViewById(R.id.idErrors);
 
@@ -111,6 +120,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         res1.setText("ELS CALÇOTS I ELS CASTELLS");
                         res2.setText("ELS CASTELLS I EL CAMPANAR");
                         res3.setText("EL CAMPANAR I ELS GEGATS");
+                        //posar imatge nova
+                        imatge.setImageDrawable(getResources().getDrawable(orgue));
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
@@ -131,7 +142,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         layoutrelacio.setVisibility(View.VISIBLE);
 
                         preguntaa.setText("LLEGIU I RELACIONEU CADA TIPUS D’ORGUE AMB LA DEFINICIÓ QUE CREIEU QUE LI CORRESPON.");
-
+                        //posar imatge nova
+                        imatge.setImageDrawable(getResources().getDrawable(tiposorgue));
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
@@ -190,7 +202,6 @@ public class PreguntesJoc2 extends AppCompatActivity {
                                 contador = contador + 1;
                             }
                         }
-
                         public void onNothingSelected(AdapterView<?> parent) {
 
                         }
@@ -200,17 +211,20 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         encerts.setText(String.valueOf(enInt));
                         Preguntes_Spinner=false;
                         Preguntes_CheckBox=true;
+
+                        layoutCaselles.setVisibility(View.VISIBLE);
+                        layoutradiobutton.setVisibility(View.INVISIBLE);
+                        layoutrelacio.setVisibility(View.INVISIBLE);
+
+                        preguntaa.setText("MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
+                        //posar imatge nova
+                        imatge.setImageDrawable(getResources().getDrawable(partsorgue));
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
+                        contador=0;
                     }
                 } else if (Preguntes_CheckBox==true){
-                    layoutCaselles.setVisibility(View.VISIBLE);
-                    layoutradiobutton.setVisibility(View.INVISIBLE);
-                    layoutrelacio.setVisibility(View.INVISIBLE);
-
-                    preguntaa.setText("MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
-
                     if (cb3.isChecked() && cb5.isChecked() && cb6.isChecked() && cb7.isChecked() && cb9.isChecked()) {
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
@@ -230,6 +244,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         res3.setText("L’ORGANISTA CONSTRUEIX I L’ORGUENER TOCA.");
                         res4.setVisibility(View.VISIBLE);
                         res4.setText("L’ORGUENER TOCA MOLT I L’ORGANISTA NO TOCA GAIRE.");
+                        //posar imatge nova
+                        imatge.setImageDrawable(getResources().getDrawable(teclat));
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
@@ -248,6 +264,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         res2.setText("ENTRE 21 I 40");
                         res3.setText("MÉS DE 40");
                         res4.setVisibility(View.INVISIBLE);
+                        //posar imatge nova
+                        imatge.setImageDrawable(getResources().getDrawable(escuts));
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));

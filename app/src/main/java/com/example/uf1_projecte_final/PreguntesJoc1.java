@@ -39,6 +39,9 @@ public class PreguntesJoc1 extends AppCompatActivity {
 
         ImageView botoInfo = (ImageView) findViewById(R.id.botoInformacio);
 
+        //definim imatges
+        int orgueantic = R.drawable.orgueantic;
+
         //afegim preguntes a la llista
         preguntesArray.add("BUSQUEU AQUEST CARREU I SITUEU-LO AL PLÀNOL. (CAL RESPONDRE PER AVANÇAR");
         preguntesArray.add("SEGONS LA IMATGE, ON CREIEU QUE ESTAVA SITUAT L'ORGUE ANTERIOR? SITUEU-LO AL PLÀNOL");
@@ -77,8 +80,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
                     encerts.setText(String.valueOf(encertsInt));
 
                     //posar imatge nova
-                    int aaaaa = R.drawable.aaaaa;
-                    imatgee.setImageDrawable(getResources().getDrawable(aaaaa));
+                    imatgee.setImageDrawable(getResources().getDrawable(orgueantic));
 
                     idPregunta++;
                     omplirPregunta.setText(preguntesArray.get(idPregunta));
