@@ -13,8 +13,7 @@
         android:theme="@style/Theme.UF1_Projecte_final"
         tools:targetApi="31">
         <activity
-            android:name=".Popup"
-            android:exported="true"
+            android:name=".PopupInfo"
             android:theme="@style/Theme.UF1_Projecte_final.TemaPopup"/>
         <activity
             android:name=".MainActivity"

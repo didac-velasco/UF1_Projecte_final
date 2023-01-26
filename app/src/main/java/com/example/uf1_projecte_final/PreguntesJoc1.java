@@ -49,7 +49,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
         botoInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( PreguntesJoc1.this, Popup.class); //crear intent
+                Intent intent = new Intent( PreguntesJoc1.this, PopupInfo.class); //crear intent
                 startActivity(intent); //executar intent
             }
         });

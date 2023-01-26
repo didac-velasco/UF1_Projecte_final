@@ -9,8 +9,7 @@
     </style>
     <style name="Theme.UF1_Projecte_final.TemaPopup">
         <item name="android:windowIsFloating">true</item> <!--posar una petita sombra -->
-        <!--<item name="android:windowIsTranslucent">true</item> treure fons negre -->
+        <item name="android:windowIsTranslucent">true</item> <!--treure fons negre -->
         <item name="android:windowCloseOnTouchOutside">true</item> <!--tancar quan cliquem fora del quadre -->
-        <item name="android:windowBackground">@color/transparente</item>
     </style>
 </resources>

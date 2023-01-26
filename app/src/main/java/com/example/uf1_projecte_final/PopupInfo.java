@@ -3,9 +3,8 @@ package com.example.uf1_projecte_final;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.Display;
 
-public class Popup extends AppCompatActivity {
+public class PopupInfo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

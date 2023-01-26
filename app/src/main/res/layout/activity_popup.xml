@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00BCD4"
-    tools:context=".Popup">
+    tools:context=".PopupInfo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,25 +16,25 @@
             android:layout_width="match_parent"
             android:layout_height="31dp" />
 
-        <ImageView
-            android:id="@+id/imatgeInfo"
-            android:layout_width="60dp"
-            android:layout_height="47dp"
-            android:layout_gravity="center"
-            app:srcCompat="@android:drawable/ic_dialog_info" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="24dp" />
-
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="396dp"
+            android:layout_width="322dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="L’any 1936 va ser destruït i van fondre el metall dels tubs per fer munició per a la guerra civil espanyola. L’últim dia que es va fer sonar va ser el 21 de juliol."
+            android:text="Benvinguts a la visita. Aquesta aplicació us anira guiant per a descobrir aquest instrument."
             android:textSize="16sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="310dp"
+            android:layout_height="306dp"
+            android:layout_gravity="center"
+            android:src="@drawable/orgueVallsTubs" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
