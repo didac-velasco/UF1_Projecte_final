@@ -23,17 +23,20 @@ public class PopupInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popup);
 
-        DisplayMetrics mida = new DisplayMetrics(); //capturar mida pantalla
+        //DECLAREM LA MIDA DE LA PANTALA
+        DisplayMetrics mida = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(mida);
 
         int ample = mida.widthPixels;
         int altura = mida.heightPixels;
-        //mides pop-up
+        //LI POSEM LES MIDES AL POPUP
         getWindow().setLayout((int) (ample*0.85), (int) (altura*0.5));
 
+        //FEM AIXO PER PODER PASAR PER PARAMETRE LA POSICIÓ A MOSTRAR
         bundle = getIntent().getExtras();
         pos = bundle.getInt("posicio");
 
+        //AFEGIM CADA PART DE L'INFORMACIÓ A L'ARRAYLIST
         informacio.add("");
         informacio.add("Aquests carreus donen informació de qui i com s’ha pogut  construir aquest edifici. Els lleons representen la força, el valor i la noblesa i per altra banda veiem l’escut de la ciutat. La gent de la ciutat s’han preocupat per poder-lo construir i hi ha col·laborat en la mesura que a cadascú li era possible.");
         informacio.add("La ciutat de Valls se sap que ja tenia orgue des de fa molts anys. Quan es va construir aquest edifici ja es va tenir present que n’havia de tenir un i l’any 1590 se sap que ja va sonar per primer cop. L’orgue que podeu veure a la fotografia és el resultat de les restauracions que aquell orgue va anar tenint al llarg dels anys.Durant 346 anys hi va haver un orgue sonant en aquesta nau fins que el 21 de juliol de l’any 1936, amb la guerra civil, va ser destruït. Han passat més de 80 anys fins que no s’ha pogut recuperar un orgue per a la ciutat.");
@@ -44,8 +47,10 @@ public class PopupInfo extends AppCompatActivity {
         informacio.add("A partir d'ara la Ciutat comptarà amb un intrument ubicat en aquest espai tan gran i que està pensat que tingui diferents usos: Concerts, acompanyament a la litúrgia i aprenentatge i estudi de l'instrument.");
 
         TextView popup = findViewById(R.id.textView13);
+        //LI PASEM LA POSICIÓ I MOSTRA EL CONTINGUT
         popup.setText(informacio.get(pos));
 
+        //AFEGIM L'INFORMACIÓ INICIAL A L'ARRAYLIST
         bundleinicial= getIntent().getExtras();
         inici.add("Benvinguts a la visita. Aquesta aplicació us anira guiant per a descobrir aquest instrument.");
         inici.add("Ara ja podeu entrar a la nau i continuar amb la visita. Durant la visita haureu d’anar-vos fixant si hi ha recordatoris referents a la ciutat tal com hem vist a fora. Quantifiqueu-los i al final del recorregut trieu la resposta correcta.");
@@ -58,6 +63,7 @@ public class PopupInfo extends AppCompatActivity {
         inici.add("Heu recordat de comptar els escuts de la ciutat? Ara podeu donar la resposta.");
         inici.add("Voleu escoltar com sona?");
 
+        //AFEGIM LES IMATGES A L'ARRAY D'IMATGES
         int imatge1 = R.drawable.i3;
         imatges_inici.add(imatge1);
     }

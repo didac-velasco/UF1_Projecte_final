@@ -10,15 +10,19 @@ import android.widget.Toast;
 public class Historia extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //MOSTREM LA PAG AMB TOTA L'HISTORIA
         setContentView(R.layout.historia);
 
         ImageButton btnanterior = (ImageButton) findViewById(R.id.btAnterior);
 
+        //ACCIÓ DEL BOTO ANTERIOR
         btnanterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( Historia.this, MainActivity.class); //crear intent
-                startActivity(intent); //executar intent
+                //CREEM UN INTENT QUE ENS PORTARA A LA PAG INICIAL
+                Intent intent = new Intent( Historia.this, MainActivity.class);
+                //EXECUTEM INTENT
+                startActivity(intent);
             }
         });
     }

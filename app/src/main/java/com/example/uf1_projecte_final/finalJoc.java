@@ -13,31 +13,40 @@ public class finalJoc extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.final_joc);
-
+        //OBTENIM ELS VALORS DE LES VARIABLES
         bundle = getIntent().getExtras();
         erInt = bundle.getInt("errors");
         enInt = bundle.getInt("encerts");
+
         Button boto = (Button) findViewById(R.id.button);
 
         EditText encerts = (EditText) findViewById(R.id.idEncerts);
+        //DONEM EL TOTAL D'ENCERTS
         encerts.setText(String.valueOf(enInt));
         EditText errors = (EditText) findViewById(R.id.idErrors);
+        //DONEM EL TOTAL D'INCORRECTES
         errors.setText(String.valueOf(erInt));
 
+        //CALCUL % PREGUNTES CORRECTES I D'INCORRECTES
         suma = erInt + enInt;
         Pencerts = enInt*100/suma;
         Perrors = erInt*100/suma;
 
         EditText Tcorrectes = (EditText) findViewById(R.id.idTotalCorrectes);
+        //DONEM % DE PREGUNTES CORRECTES
         Tcorrectes.setText(String.valueOf(Pencerts));
         EditText Tincorrectes = (EditText) findViewById(R.id.idTotalIncorrectes);
+        //DONEM % DE PREGUNTES INCORRECTES
         Tincorrectes.setText(String.valueOf(Perrors));
 
+        //ACCIÓ BOTO TORNAR INICI
         boto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( finalJoc.this, MainActivity.class); //crear intent
-                startActivity(intent); //executar intent
+                //CREEM UN INTENT QUE ENS PORTARA A LA PAG INICIAL
+                Intent intent = new Intent( finalJoc.this, MainActivity.class);
+                //EXECUTEM INTENT
+                startActivity(intent);
             }
         });
     }

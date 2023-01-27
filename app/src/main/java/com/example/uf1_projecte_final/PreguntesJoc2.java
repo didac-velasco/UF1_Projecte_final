@@ -40,20 +40,25 @@ public class PreguntesJoc2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.joc2);
 
+        //RECUPEREM LES VARIABLES DE PREGUNTES CORRES I D'INCORRECTES
+
         bundle = getIntent().getExtras();
         erInt = bundle.getInt("errors");
         enInt = bundle.getInt("encerts");
+
+        //RECUPEREM ELS VALOR DEL ELEMENTS DE LA PAG
+
         layoutradiobutton = (LinearLayout) findViewById(R.id.layoutRadioButtons);
         layoutrelacio = (LinearLayout) findViewById(R.id.layoutrelacionar);
         layoutCaselles = (LinearLayout) findViewById(R.id.layoutCheckbox);
 
-        //enviar el menú desplegable Android a Java
+        //PASEM ELS SPINNER DE ANDROID A JAVA
         Spinner desp1 = findViewById(R.id.spinner1);
         Spinner desp2 = findViewById(R.id.spinner2);
         Spinner desp3 = findViewById(R.id.spinner3);
         Spinner desp4 = findViewById(R.id.spinner4);
 
-        //MOSTRAR ELS ELEMENTS DECLARATS DE STRINGS.XML AL DESPLEGABLE
+        //OMPLIM EL DESPLEGABLE AMB ELS VAROLS DEFINITS A values/strings.xml
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opcions_desple, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
 
@@ -81,7 +86,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
         ImageView botoInfo = (ImageView) findViewById(R.id.botoInformacio);
 
-        //definim imatges
+        //DEFINIM IMATGES QUE NECESSITEM
         ImageView imatge = findViewById(R.id.imatgePregunta);
         int orgue = R.drawable.orge;
         int tiposorgue = R.drawable.tiposorgue;
@@ -96,109 +101,147 @@ public class PreguntesJoc2 extends AppCompatActivity {
         errors.setText(String.valueOf(erInt));
 
 
-
+        //LI PASEM LA NOVA PREGUNTA QUE HA DE MOSTRAR
         preguntaa.setText("OBSERVEU BÉ LA IMATGE I RESPONEU");
+        //TAMBÉ LI PASEM LES SEVES RESPOSTES
         res1.setText("ESTÀ ARRAN DE TERRA");
         res2.setText("ESTÀ SUSPÉS EN UNA BALCONADA");
+        //OCULTEM AQUESTS DOS RADIOBUTTONS PERQUE NO ELS UTILITZEM
         res3.setVisibility(View.INVISIBLE);
         res4.setVisibility(View.INVISIBLE);
 
+        //ACCIO A L'APRETAR EL BOTO D'INFORMACIÓ
         botoInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent( PreguntesJoc2.this, PopupInfo.class); //crear intent
+                //INTENT QUE EXECUTARA EL POPUP AMB L'INFORMACIÓ
+                Intent intent = new Intent( PreguntesJoc2.this, PopupInfo.class);
+                //LI PASEM PER PARAMETRE QUINA INFORMACIÓ VOLEM VEURE
                 intent.putExtra("posicio", contadorInfo);
-                startActivity(intent); //executar intent
+                //S'EXECUTA INTENT
+                startActivity(intent);
             }
         });
+
+        //ACCIO A L'APRETAR EL BOTO SEGÜENT
         Siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (Preguntes_RadioButton4_2==true){
+                    //COMPROVEM QUE EL RADIOBUTTON2 ES L'OPCIÓ MARCADA
                     if (res2.isChecked()) {
+                        //DONEM UN VALOR NOU AL CONTADOR
                         contadorInfo=3;
+                        //SUMEM 1 AL CONTADOR D'ENCERTS
                         enInt++;
+                        //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                         encerts.setText(String.valueOf(enInt));
 
-                        //canviem valors del bool
+                        //CAMBIEM ELS VALORS DEL BOLEANS
                         Preguntes_RadioButton1_3 = true;
                         Preguntes_RadioButton4_2 = false;
 
-                        //nova pregunta
+                        //FEM VISIBLE 1 DELS RADIOSBUTTONS OCULTATS
                         res3.setVisibility(View.VISIBLE);
+                        //LI PASEM LA NOVA PREGUNTA QUE HA DE MOSTRAR
                         preguntaa.setText("QUINA ÉS LA RELACIÓ ENTRE EL DISSENY DE LA FAÇANA DEL NOU ORGUE I LA CIUTAT DE VALLS?");
+                        //TAMBÉ LI PASEM LES NOVES RESPOSTES
                         res1.setText("ELS CALÇOTS I ELS CASTELLS");
                         res2.setText("ELS CASTELLS I EL CAMPANAR");
                         res3.setText("EL CAMPANAR I ELS GEGATS");
-                        //posar imatge nova
+                        //POSEM UNA IMATGE NOVA
                         imatge.setImageDrawable(getResources().getDrawable(orgue));
 
                     } else {
+                        //SUMEM 1 AL CONTADOR D'INCORRECTES
                         erInt++;
+                        //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                         errors.setText(String.valueOf(erInt));
                     }
+                    //COMPROVEM EL BOLEA
                 } else if (Preguntes_RadioButton1_3==true){
+                    //COMPROVEM QUE EL SEGON RADIOBUTTON ES L'OPCIÓ MARCADA
                     if (res2.isChecked()) {
+                        //DONEM UN VALOR NOU AL CONTADOR
                         contadorInfo=4;
+                        //SUMEM 1 AL CONTADOR D'ENCERTS
                         enInt++;
+                        //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                         encerts.setText(String.valueOf(enInt));
 
-                        //canviem valors del bool
+                        //CAMBIEM ELS VALORS DEL BOLEANS
                         Preguntes_RadioButton1_3 = false;
                         Preguntes_Spinner = true;
 
-                        //nova pregunta
-                        //AQUI DIEM QUIN LAYOUT VOLEM QUE ES VEIGI O NO
+                        //FEM CANVI DE LAYOUT DIEM QUIN VOLEM VEURE I QUIN NO
                         layoutradiobutton.setVisibility(View.INVISIBLE);
                         layoutCaselles.setVisibility(View.INVISIBLE);
                         layoutrelacio.setVisibility(View.VISIBLE);
 
+                        //LI PASEM LA NOVA PREGUNTA QUE HA DE MOSTRAR
                         preguntaa.setText("LLEGIU I RELACIONEU CADA TIPUS D’ORGUE AMB LA DEFINICIÓ QUE CREIEU QUE LI CORRESPON.");
-                        //posar imatge nova
+                        //POSEM UNA NOVA IMATGE
                         imatge.setImageDrawable(getResources().getDrawable(tiposorgue));
 
                         //CANVIAR IMATGE BOTO SEGÜENT
                         Siguiente.setImageResource(R.drawable.opcions);
                     } else {
+                        //SUMEM 1 AL CONTADOR D'INCORRECTES
                         erInt++;
+                        //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                         errors.setText(String.valueOf(erInt));
                     }
-
+                    //COMPROVEM EL BOLEA
                 } else if (Preguntes_Spinner==true) {
+                    //TORNEM A POSAR EL BOTO PER PASAR DE PREGUNTA
                     Siguiente.setImageResource(R.drawable.next);
+                    //MOSTREM ELS SPINNERS
                     desp1.setAdapter(adapter);
                     desp2.setAdapter(adapter);
                     desp3.setAdapter(adapter);
                     desp4.setAdapter(adapter);
                     erInt=erInt-4;
                     errors.setText(String.valueOf(erInt));
+
                     //AGAFEM LA POSICIÓ DE L'OPCÓ ESCOLLIDA DEL DESPLEGABLE AMB EL setOnItemSelectedListener
                     desp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
                         //S'HA TRIAT UNA OPCIÓ
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                            //AGAFEM LA POSICIÓ
+                            //AGAFEM EL VALOR TRIAT DINS D'UN OBJECTE
                             rel1 = parent.getItemAtPosition(position);
+                            //COMPROVEM QUE L'OBJECTE SIGUI IGUAL QUE L'OPCIO CORRECTA
                             if (rel1.toString().equals("B- ES PORTA A SOBRE MENTRE E TOCA")) {
+                                //SUMEM 1 SI ES SI
                                 contador = contador + 1;
                             } else {
+                                //SUMEM 1 AL CONTADOR D'INCORRECTES
                                 erInt++;
+                                //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
                                 contador=0;
                             }
                         }
+
+                        //AQUESTA FUNCIÓ ES BUIDA PERQUE EN EL NOSTRE CAS NO L'UTILITZEM, PERO ES OBLIGATORIA TENIR-LA, JA QUE VA JUNTA AMB L'ANTERIOR
                         public void onNothingSelected(AdapterView<?> parent) {
 
                         }
                     });
 
+                    //S'HA TRIAT UNA OPCIÓ
                     desp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            //AGAFEM EL VALOR TRIAT DINS D'UN OBJECTE
                             rel2 = parent.getItemAtPosition(position);
+                            //COMPROVEM QUE L'OBJECTE SIGUI IGUAL QUE L'OPCIO CORRECTA
                             if (rel2.toString().equals("C- ES POT POSAR A DIFERENTS LLOCS")) {
+                                //SUMEM 1 SI ES SI
                                 contador = contador + 1;
                             } else {
+                                //SUMEM 1 AL CONTADOR D'INCORRECTES
                                 erInt++;
+                                //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
                                 contador=0;
                             }
@@ -211,11 +254,16 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
                     desp3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            //AGAFEM EL VALOR TRIAT DINS D'UN OBJECTE
                             rel3 = parent.getItemAtPosition(position);
+                            //COMPROVEM QUE L'OBJECTE SIGUI IGUAL QUE L'OPCIO CORRECTA
                             if (rel3.toString().equals("A- TÉ NOMÉS UN TECLAT PERÒ JA TÉ DIMENSIONS CONSIDERABLES")) {
+                                //SUMEM 1 SI ES SI
                                 contador = contador + 1;
                             } else {
+                                //SUMEM 1 AL CONTADOR D'INCORRECTES
                                 erInt++;
+                                //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
                                 contador=0;
                             }
@@ -228,11 +276,16 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
                     desp4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            //AGAFEM EL VALOR TRIAT DINS D'UN OBJECTE
                             rel4 = parent.getItemAtPosition(position);
+                            //COMPROVEM QUE L'OBJECTE SIGUI IGUAL QUE L'OPCIO CORRECTA
                             if (rel4.toString().equals("D- TÉ MILERS DE TUBS I NECESSITA UN ESPAI GRAN PER A POSAR-LO")) {
+                                //SUMEM 1 SI ES SI
                                 contador = contador + 1;
                             } else {
+                                //SUMEM 1 AL CONTADOR D'INCORRECTES
                                 erInt++;
+                                //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
                                 contador=0;
                             }
@@ -241,35 +294,46 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
                         }
                     });
+                    //COMPROVEM QUE EL CONTADOR ES IGUAL A 4
                     if (contador == 4) {
+                        //DONEM UN VALOR NOU AL CONTADOR
                         contadorInfo=5;
+                        //SUMEM 1 AL CONTADOR DE CORRECTES
                         enInt++;
+                        //ACTUALITZEM VARIABLE DE CORRECTES I ES MOSTRA
                         encerts.setText(String.valueOf(enInt));
+
+                        //CANVIEM ELS VALORS DELS BOLEANS
                         Preguntes_Spinner=false;
                         Preguntes_CheckBox=true;
-
+                        //DIEM QUIN LAYOUT VOLEM VEURE I QUIN NO
                         layoutCaselles.setVisibility(View.VISIBLE);
                         layoutradiobutton.setVisibility(View.INVISIBLE);
                         layoutrelacio.setVisibility(View.INVISIBLE);
 
+                        //POSEM LA NOVA PREGUNTA
                         preguntaa.setText("MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
-                        //posar imatge nova
+                        //POSEM UNA IMATGE NOVA
                         imatge.setImageDrawable(getResources().getDrawable(partsorgue));
                     }
+                    //COMPROVEM EL BOLEA
                 } else if (Preguntes_CheckBox==true){
+                    //COMPROVEM QUE ELS CHECKSBOX 3,5,6,7 I 9 SON ELS TRIATS
                     if (cb3.isChecked() && cb5.isChecked() && cb6.isChecked() && cb7.isChecked() && cb9.isChecked()) {
+                        //DONEM UN VALOR NOU A LA VARIABLE
                         contadorInfo=6;
+                        //SUMEM 1 A CORRECTES I MOSTREM
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
 
-                        //canviem valors bool
+                        //CANVIEM ELS BOLEANS
                         Preguntes_CheckBox=false;
                         Preguntes_RadioButton2_4=true;
-
-                        //nova pregunta
+                        //DIEM QUIN LAYOUT VOLEM VEURE
                         layoutCaselles.setVisibility(View.INVISIBLE);
                         layoutradiobutton.setVisibility(View.VISIBLE);
                         layoutrelacio.setVisibility(View.INVISIBLE);
+                        //PASEM LA NOVA PREGUNTA AMB LES SEVES RESPOSTES
                         preguntaa.setText("QUINA ÉS LA DIFERÈNCIA ENTRE ORGUENER I ORGANISTA?");
                         res1.setText("NO HI HA CAP DIFERÈNCIA, ÉS EL MATEIX.");
                         res2.setText("L’ORGUENER CONSTRUEIX I L’ORGANISTA TOCA.");
@@ -277,9 +341,10 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         res3.setText("L’ORGANISTA CONSTRUEIX I L’ORGUENER TOCA.");
                         res4.setVisibility(View.VISIBLE);
                         res4.setText("L’ORGUENER TOCA MOLT I L’ORGANISTA NO TOCA GAIRE.");
-                        //posar imatge nova
+                        //POSEM UNA IMATGE NOVA
                         imatge.setImageDrawable(getResources().getDrawable(teclat));
                     } else {
+                        //SUMEM 1 AL CONTADOR D'INCORRECTES I EL MOSTREM
                         erInt++;
                         errors.setText(String.valueOf(erInt));
                     }
@@ -289,16 +354,16 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         enInt++;
                         encerts.setText(String.valueOf(enInt));
 
-                        //canviem valors bool
+                        //CANVIEM ELS VALORS DELS BOLEANS
                         Preguntes_RadioButton2_4=false;
                         Preguntes_RadioButton3_3=true;
-                        //nova pregunta
+                        //LI PASEM LA NOVA PREGUNTA AMB LES RESPOSTES
                         preguntaa.setText("HEU RECORDAT DE COMPTAR ELS ESCUTS DE LA CIUTAT? QUANTS ESCUTS DE LA CIUTAT HAS POGUT COMPTABILITZAR AL LLARG DE LA VISITA?");
                         res1.setText("ENTRE 10 I 20");
                         res2.setText("ENTRE 21 I 40");
                         res3.setText("MÉS DE 40");
                         res4.setVisibility(View.INVISIBLE);
-                        //posar imatge nova
+                        //POSEM UNA IMATGE NOVA
                         imatge.setImageDrawable(getResources().getDrawable(escuts));
                     } else {
                         erInt++;
@@ -310,10 +375,13 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         encerts.setText(String.valueOf(enInt));
                         Preguntes_RadioButton3_3=false;
 
-                        Intent intent = new Intent( PreguntesJoc2.this, finalJoc.class); //crear intent
+                        //CREEM UN INTENT NOU QUE ENS PASARA A LA PAG FINAL
+                        Intent intent = new Intent( PreguntesJoc2.this, finalJoc.class);
+                        //PASEM LA VARIABLE D'ENCERTS I D'ERRORS PER PODER-LA UTILITZAR A L'ALTRE CLASS
                         intent.putExtra("errors", erInt);
                         intent.putExtra("encerts", enInt);
-                        startActivity(intent); //executar intent
+                        //EXECUTEM INTENT
+                        startActivity(intent);
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
