@@ -219,7 +219,6 @@ public class PreguntesJoc2 extends AppCompatActivity {
                                 erInt++;
                                 //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
-                                contador=0;
                             }
                         }
 
@@ -243,7 +242,6 @@ public class PreguntesJoc2 extends AppCompatActivity {
                                 erInt++;
                                 //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
-                                contador=0;
                             }
                         }
 
@@ -265,7 +263,6 @@ public class PreguntesJoc2 extends AppCompatActivity {
                                 erInt++;
                                 //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
-                                contador=0;
                             }
                         }
 
@@ -287,7 +284,6 @@ public class PreguntesJoc2 extends AppCompatActivity {
                                 erInt++;
                                 //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
-                                contador=0;
                             }
                         }
                         public void onNothingSelected(AdapterView<?> parent) {

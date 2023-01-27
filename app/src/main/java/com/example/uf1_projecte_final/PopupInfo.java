@@ -64,7 +64,9 @@ public class PopupInfo extends AppCompatActivity {
         inici.add("Voleu escoltar com sona?");
 
         //AFEGIM LES IMATGES A L'ARRAY D'IMATGES
-        int imatge1 = R.drawable.i3;
+        int imatge1 = R.drawable.i2;
+        int imatge2 = R.drawable.granorgue;
         imatges_inici.add(imatge1);
+        imatges_inici.add(imatge2);
     }
 }
