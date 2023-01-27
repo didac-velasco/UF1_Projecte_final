@@ -12,7 +12,8 @@
         android:layout_height="732dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView2"
@@ -20,14 +21,14 @@
             android:layout_height="48dp"
             android:background="#66000000"
             android:gravity="center"
-            android:text="FINAL JOC"
+            android:text="FINAL DEL JOC"
             android:textColor="#FAF8F8"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="85dp" />
 
         <TextView
             android:id="@+id/pCorrectes"
@@ -38,12 +39,13 @@
             android:text="TOTAL PREGUNTES CORRECTES:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#4CAF50"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/idEncerts"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:enabled="false"
@@ -64,12 +66,13 @@
             android:text="TOTAL PREGUNTES INCORRECTES:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#F10C0C"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/idErrors"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:enabled="false"
@@ -90,12 +93,13 @@
             android:text="% DE PREGUNTES CORRECTES:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#4CAF50"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/idTotalCorrectes"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="57dp"
             android:layout_weight="1"
             android:ems="10"
             android:enabled="false"
@@ -116,12 +120,13 @@
             android:text="% DE PREGUNTES INCORRECTES:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#F10C0C"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/idTotalIncorrectes"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:ems="10"
             android:enabled="false"
@@ -131,12 +136,15 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="230dp" />
+            android:layout_height="175dp" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PANTALLA INICI" />
+            android:background="#DC6C3F"
+            android:text="PANTALLA INICI"
+            android:textColor="#FDFAFA"
+            android:textStyle="bold" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

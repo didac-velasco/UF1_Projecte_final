@@ -2,14 +2,95 @@
     <!-- Base application theme. -->
     <style name="Theme.UF1_Projecte_final" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorPrimary">#8F511B</item>
+        <item name="colorPrimaryDark">#BA7C04</item>
+        <item name="colorAccent">#DA7203</item>
         <!-- Customize your theme here. -->
     </style>
     <style name="Theme.UF1_Projecte_final.TemaPopup">
         <item name="android:windowIsFloating">true</item> <!--posar una petita sombra -->
         <item name="android:windowIsTranslucent">true</item> <!--treure fons negre -->
         <item name="android:windowCloseOnTouchOutside">true</item> <!--tancar quan cliquem fora del quadre -->
+    </style>
+
+    <style name="Theme.imatgebutton" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.radiobutton" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">#66000000</item>
+        <item name="android:buttonTint">#DC6C3F</item>
+        <item name="android:textColor">#F6F8F5</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.textview.spinner" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">#66000000</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#F6F1F1</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.tablerow" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.spinner" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:layout_width">190dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">#DC6C3F</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.CheckBox" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">100dp</item>
+        <item name="android:buttonTint">#DC6C3F</item>
+        <item name="android:textColor">#FDFBFB</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.nomcontadors" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.contadors" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ems">10</item>
+        <item name="android:enabled">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:text">0</item>
+        <!-- Customize your theme here. -->
     </style>
 </resources>

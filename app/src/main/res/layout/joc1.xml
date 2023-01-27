@@ -56,23 +56,17 @@
 
             <ImageButton
                 android:id="@+id/imageButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/Theme.imatgebutton"
                 app:srcCompat="@drawable/i1" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/Theme.imatgebutton"
                 app:srcCompat="@drawable/i2" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/Theme.imatgebutton"
                 app:srcCompat="@drawable/i3" />
 
         </LinearLayout>
@@ -84,23 +78,17 @@
 
             <ImageButton
                 android:id="@+id/imageButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/Theme.imatgebutton"
                 app:srcCompat="@drawable/i4" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/Theme.imatgebutton"
                 app:srcCompat="@drawable/i5" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                style="@style/Theme.imatgebutton"
                 app:srcCompat="@drawable/i6" />
         </LinearLayout>
 
@@ -112,47 +100,25 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                style="@style/Theme.nomcontadors"
                 android:text="CORRECTES;"
-                android:textColor="#68F106"
-                android:textStyle="bold" />
+                android:textColor="#68F106" />
 
             <EditText
                 android:id="@+id/idTotalCorrectes"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:text="0"
+                style="@style/Theme.contadors"
                 android:textColor="#68F106"
-                android:enabled="false"
                 tools:text="0" />
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                style="@style/Theme.nomcontadors"
                 android:text="INCORRECTES;"
-                android:textColor="#F30303"
-                android:textStyle="bold" />
+                android:textColor="#F30303" />
 
             <EditText
                 android:id="@+id/idErrors"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:gravity="center"
-                android:inputType="number"
-                android:text="0"
-                android:enabled="false"
+                style="@style/Theme.contadors"
                 android:textColor="#F30303" />
         </LinearLayout>
 

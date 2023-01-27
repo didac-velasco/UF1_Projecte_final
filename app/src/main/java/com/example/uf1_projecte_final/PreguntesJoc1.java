@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class PreguntesJoc1 extends AppCompatActivity {
-    int contadorPreguntes=1, errorsInt=0, encertsInt=0, idPregunta=0;
+    int contadorPreguntes=1, errorsInt=0, encertsInt=0, idPregunta=0, cont_info=0;
 
     private ArrayList<String> preguntesArray = new ArrayList();
 

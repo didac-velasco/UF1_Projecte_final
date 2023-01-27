@@ -66,47 +66,23 @@
 
                     <RadioButton
                         android:id="@+id/rb1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
-                        android:layout_marginRight="20dp"
-                        android:background="#66000000"
-                        android:buttonTint="#DC6C3F"
-                        android:text="RadioButto"
-                        android:textColor="#F6F8F5" />
+                        style="@style/Theme.radiobutton"
+                        android:text="RadioButto" />
 
                     <RadioButton
                         android:id="@+id/rb2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
-                        android:layout_marginRight="20dp"
-                        android:background="#66000000"
-                        android:buttonTint="#DC6C3F"
-                        android:text="RadioButton"
-                        android:textColor="#F6F8F5" />
+                        style="@style/Theme.radiobutton"
+                        android:text="RadioButton" />
 
                     <RadioButton
                         android:id="@+id/rb3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
-                        android:layout_marginRight="20dp"
-                        android:background="#66000000"
-                        android:buttonTint="#DC6C3F"
-                        android:text="RadioButton"
-                        android:textColor="#F6F8F5" />
+                        style="@style/Theme.radiobutton"
+                        android:text="RadioButton" />
 
                     <RadioButton
                         android:id="@+id/rb4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="60dp"
-                        android:layout_marginRight="20dp"
-                        android:background="#66000000"
-                        android:buttonTint="#DC6C3F"
-                        android:text="RadioButton"
-                        android:textColor="#F8F5F5" />
+                        style="@style/Theme.radiobutton"
+                        android:text="RadioButton" />
 
                 </RadioGroup>
 
@@ -123,101 +99,55 @@
                     android:layout_height="match_parent">
 
                     <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/Theme.tablerow">
 
                         <TextView
                             android:id="@+id/tipusorgue1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp"
-                            android:background="#66000000"
-                            android:text="1- ORGUE PORTATIU"
-                            android:textColor="#F6F1F1"
-                            android:textSize="16sp" />
+                            style="@style/Theme.textview.spinner"
+                            android:text="1- ORGUE PORTATIU"/>
 
                         <Spinner
                             android:id="@+id/spinner1"
-                            android:layout_width="190dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="20dp"
-                            android:background="#DC6C3F" />
+                            style="@style/Theme.spinner"/>
                     </TableRow>
 
                     <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/Theme.tablerow">
 
                         <TextView
                             android:id="@+id/tipusorgue2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="20dp"
-                            android:background="#66000000"
-                            android:text="2- ORGUE POSITIU"
-                            android:textColor="#FAF7F7"
-                            android:textSize="16sp" />
+                            style="@style/Theme.textview.spinner"
+                            android:text="2- ORGUE POSITIU" />
 
                         <Spinner
                             android:id="@+id/spinner2"
-                            android:layout_width="190dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="20dp"
-                            android:background="#DC6C3F" />
+                            style="@style/Theme.spinner"/>
                     </TableRow>
 
                     <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/Theme.tablerow">
 
                         <TextView
                             android:id="@+id/tipusorgue3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="20dp"
-                            android:background="#66000000"
-                            android:text="3- ORGUE PRINCIPAL"
-                            android:textColor="#FFFEFE"
-                            android:textSize="16sp" />
+                            style="@style/Theme.textview.spinner"
+                            android:text="3- ORGUE PRINCIPAL" />
 
                         <Spinner
                             android:id="@+id/spinner3"
-                            android:layout_width="190dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="20dp"
-                            android:background="#DC6C3F" />
+                            style="@style/Theme.spinner"/>
                     </TableRow>
 
                     <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        style="@style/Theme.tablerow">
 
                         <TextView
                             android:id="@+id/tipusorgue4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="20dp"
-                            android:background="#66000000"
-                            android:text="4- GRAN ORGUE"
-                            android:textColor="#FBFBFB"
-                            android:textSize="16sp" />
+                            style="@style/Theme.textview.spinner"
+                            android:text="4- GRAN ORGUE" />
 
                         <Spinner
                             android:id="@+id/spinner4"
-                            android:layout_width="190dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="20dp"
-                            android:background="#DC6C3F" />
+                            style="@style/Theme.spinner"/>
                     </TableRow>
                 </TableLayout>
             </LinearLayout>
@@ -230,84 +160,48 @@
 
                 <CheckBox
                     android:id="@+id/checkBox1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:buttonTint="#DC6C3F"
-                    android:text="BARNILLES"
-                    android:textColor="#FDFBFB" />
+                    style="@style/Theme.CheckBox"
+                    android:text="BARNILLES"/>
 
                 <CheckBox
                     android:id="@+id/checkBox2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:buttonTint="#DC6C3F"
-                    android:text="CAIXA DE L’EXPRESSIU"
-                    android:textColor="#FDFBFB"/>
+                    style="@style/Theme.CheckBox"
+                    android:text="CAIXA DE L’EXPRESSIU"/>
 
                 <CheckBox
                     android:id="@+id/checkBox3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:buttonTint="#DC6C3F"
-                    android:text="MANUALS"
-                    android:textColor="#FDFBFB" />
+                    style="@style/Theme.CheckBox"
+                    android:text="MANUALS"/>
 
                 <CheckBox
                     android:id="@+id/checkBox4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:buttonTint="#DC6C3F"
-                    android:text="MANXES"
-                    android:textColor="#FDFBFB"/>
+                    style="@style/Theme.CheckBox"
+                    android:text="MANXES"/>
 
                 <CheckBox
                     android:id="@+id/checkBox5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:buttonTint="#DC6C3F"
-                    android:text="PEDAL DE L’EXPRESSIU "
-                    android:textColor="#FDFBFB"/>
+                    style="@style/Theme.CheckBox"
+                    android:text="PEDAL DE L’EXPRESSIU "/>
 
                 <CheckBox
                     android:id="@+id/checkBox6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:buttonTint="#DC6C3F"
-                    android:text="PEDALER"
-                    android:textColor="#FDFBFB"/>
+                    style="@style/Theme.CheckBox"
+                    android:text="PEDALER"/>
 
                 <CheckBox
                     android:id="@+id/checkBox7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:buttonTint="#DC6C3F"
-                    android:text="POMS DELS REGISTRES"
-                    android:textColor="#FDFBFB"/>
+                    style="@style/Theme.CheckBox"
+                    android:text="POMS DELS REGISTRES"/>
 
                 <CheckBox
                     android:id="@+id/checkBox8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:buttonTint="#DC6C3F"
-                    android:text="SECRET"
-                    android:textColor="#FDFBFB"/>
+                    style="@style/Theme.CheckBox"
+                    android:text="SECRET"/>
 
                 <CheckBox
                     android:id="@+id/checkBox9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="100dp"
-                    android:buttonTint="#DC6C3F"
-                    android:text="TUBS"
-                    android:textColor="#FDFBFB" />
+                    style="@style/Theme.CheckBox"
+                    android:text="TUBS"/>
             </LinearLayout>
 
         </FrameLayout>
@@ -320,47 +214,25 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                style="@style/Theme.nomcontadors"
                 android:text="CORRECTES;"
-                android:textColor="#68F106"
-                android:textStyle="bold" />
+                android:textColor="#68F106"/>
 
             <EditText
                 android:id="@+id/idTotalCorrectes"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:enabled="false"
-                android:gravity="center"
-                android:inputType="number"
-                android:text="0"
+                style="@style/Theme.contadors"
                 android:textColor="#68F106"
                 tools:text="0" />
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                style="@style/Theme.nomcontadors"
                 android:text="INCORRECTES;"
-                android:textColor="#F30303"
-                android:textStyle="bold" />
+                android:textColor="#F30303"/>
 
             <EditText
                 android:id="@+id/idErrors"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:enabled="false"
-                android:gravity="center"
-                android:inputType="number"
-                android:text="0"
+                style="@style/Theme.contadors"
                 android:textColor="#F30303" />
         </LinearLayout>
 
