@@ -14,69 +14,69 @@
     </style>
     <!-- ESTIL PELS IMATGESBUTTONS DE RESPOSTA -->
     <style name="Theme.imatgebutton" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">wrap_content</item><!--ample del layout --> <!-- wrap_content assigna la mida necessaria -->
+        <item name="android:layout_height">wrap_content</item><!--altura del layout --> <!-- match_parent fa que la vista s'expandeixi el més possible -->
+        <item name="android:layout_weight">1</item><!--posar una petita sombra -->
     </style>
     <!-- ESTIL PELS RADIOBUTTON -->
     <style name="Theme.radiobutton" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">60dp</item>
-        <item name="android:layout_marginRight">20dp</item>
-        <item name="android:background">#66000000</item>
-        <item name="android:buttonTint">#DC6C3F</item>
-        <item name="android:textColor">#F6F8F5</item>
+        <item name="android:layout_width">match_parent</item><!--ample del layout --> <!-- match_parent fa que la vista s'expandeixi el més possible -->
+        <item name="android:layout_height">wrap_content</item><!--altura del layout -->
+        <item name="android:layout_marginLeft">60dp</item><!--posar marge esquerre -->
+        <item name="android:layout_marginRight">20dp</item><!--posar marge dret -->
+        <item name="android:background">#66000000</item><!--color de fons -->
+        <item name="android:buttonTint">#DC6C3F</item><!--color del boto -->
+        <item name="android:textColor">#F6F8F5</item><!-- color del text -->
     </style>
     <!-- ESTIL PELS TEXTVIEW A RELACIONAR AMB ELS SPINNERS -->
     <style name="Theme.textview.spinner" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">20dp</item>
-        <item name="android:layout_marginRight">20dp</item>
-        <item name="android:background">#66000000</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#F6F1F1</item>
+        <item name="android:layout_width">wrap_content</item><!--ample del layout -->
+        <item name="android:layout_height">wrap_content</item><!--altura del layout -->
+        <item name="android:layout_marginLeft">20dp</item><!--posar marge esquerre -->
+        <item name="android:layout_marginRight">20dp</item><!--posar marge dret -->
+        <item name="android:background">#66000000</item><!--color de fons -->
+        <item name="android:textSize">16sp</item><!-- mida de la font -->
+        <item name="android:textColor">#F6F1F1</item><!-- color del text -->
     </style>
     <!-- ESTIL PER LES FILES DEL TABLELAYOUT ON HI HA ELS TEXTVIEW I SPINNERS -->
     <style name="Theme.tablerow" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item><!--ample del layout -->
+        <item name="android:layout_height">match_parent</item><!--altura del layout -->
     </style>
     <!-- ESTIL PELS SPINNERS -->
     <style name="Theme.spinner" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">190dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">20dp</item>
-        <item name="android:background">#DC6C3F</item>
+        <item name="android:layout_width">190dp</item><!--ample del layout -->
+        <item name="android:layout_height">wrap_content</item><!--altura del layout -->
+        <item name="android:layout_marginRight">20dp</item><!--posar marge dret -->
+        <item name="android:background">#DC6C3F</item><!--color de fons -->
     </style>
     <!-- ESTIL PELS CHECKBOX -->
     <style name="Theme.CheckBox" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">100dp</item>
-        <item name="android:buttonTint">#DC6C3F</item>
-        <item name="android:textColor">#FDFBFB</item>
+        <item name="android:layout_width">match_parent</item><!--ample del layout -->
+        <item name="android:layout_height">wrap_content</item><!--altura del layout -->
+        <item name="android:layout_marginLeft">100dp</item><!--posar marge esquerre -->
+        <item name="android:buttonTint">#DC6C3F</item><!--color del boto -->
+        <item name="android:textColor">#FDFBFB</item><!-- color del text -->
     </style>
 
     <!-- ESTIL PEL TEXT CORRECTES I INCORRECTES-->
     <style name="Theme.nomcontadors" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">50dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">50dp</item><!--ample del layout -->
+        <item name="android:layout_height">wrap_content</item><!--altura del layout -->
+        <item name="android:layout_weight">1</item><!--posar una petita sombra -->
+        <item name="android:gravity">center</item><!-- definir la gravetat -->
+        <item name="android:textStyle">bold</item><!-- posem el text en negreta -->
     </style>
 
     <!-- ESTIL PELS CONTADORS DE CORRECTES I INCORRECTES -->
     <style name="Theme.contadors" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:layout_width">30dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:ems">10</item>
-        <item name="android:enabled">false</item>
-        <item name="android:gravity">center</item>
-        <item name="android:inputType">number</item>
-        <item name="android:text">0</item>
+        <item name="android:layout_width">30dp</item><!--ample del layout -->
+        <item name="android:layout_height">wrap_content</item><!--altura del layout -->
+        <item name="android:layout_weight">1</item><!--posar una petita sombra -->
+        <item name="android:ems">10</item><!-- representa la mida de la font -->
+        <item name="android:enabled">false</item><!-- text no editable -->
+        <item name="android:gravity">center</item><!-- definir la gravetat -->
+        <item name="android:inputType">number</item><!-- nomes permet numeros -->
+        <item name="android:text">0</item><!-- posem un text -->
     </style>
 </resources>
