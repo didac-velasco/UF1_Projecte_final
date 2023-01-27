@@ -28,13 +28,14 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:layout_width="900px"
                 android:layout_height="wrap_content"
                 android:text="L’ORGUE DE VALLS"
+                android:layout_gravity="center"
                 android:textAlignment="center"
                 android:textColor="#F4A067"
                 android:background="#66000000"
-                android:textSize="34sp" />
+                android:textSize="36sp" />
         </LinearLayout>
 
         <Space

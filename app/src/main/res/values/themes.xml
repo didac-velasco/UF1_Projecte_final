@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.UF1_Projecte_final" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#DC6C3F</item>
-        <item name="colorPrimaryDark">#DC6C3F</item>
-        <item name="colorAccent">#DC6C3F</item>
+        <item name="colorPrimary">#F39F67</item>
+        <item name="colorPrimaryDark">#F39F67</item>
+        <item name="colorAccent">#F39F67</item>
         <!-- Customize your theme here. -->
     </style>
     <style name="Theme.UF1_Projecte_final.TemaPopup">
