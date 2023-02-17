@@ -28,7 +28,6 @@ public class PreguntesJoc2 extends AppCompatActivity {
     boolean totes = false;
     boolean precerta = false;
     Object rel1, rel2, rel3, rel4;
-
     Boolean Preguntes_RadioButton4_2 = true;
     Boolean Preguntes_RadioButton1_3 = false;
     Boolean Preguntes_Spinner = false;
@@ -102,7 +101,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
 
         //LI PASEM LA NOVA PREGUNTA QUE HA DE MOSTRAR
-        preguntaa.setText("OBSERVEU BÉ LA IMATGE I RESPONEU");
+        preguntaa.setText("Ara aneu al lloc anterior i obriu la informació. OBSERVEU BÉ LA IMATGE I RESPONEU");
         //TAMBÉ LI PASEM LES SEVES RESPOSTES
         res1.setText("ESTÀ ARRAN DE TERRA");
         res2.setText("ESTÀ SUSPÉS EN UNA BALCONADA");
@@ -118,8 +117,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                 Intent intent = new Intent( PreguntesJoc2.this, PopupInfo.class);
                 //LI PASEM PER PARAMETRE QUINA INFORMACIÓ VOLEM VEURE
                 intent.putExtra("posicio", contadorInfo);
-                //S'EXECUTA INTENT
-                startActivity(intent);
+                startActivity(intent); //INICIEM INTENT
             }
         });
 
@@ -130,9 +128,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                 if (Preguntes_RadioButton4_2==true){
                     //COMPROVEM QUE EL RADIOBUTTON2 ES L'OPCIÓ MARCADA
                     if (res2.isChecked()) {
-                        //DONEM UN VALOR NOU AL CONTADOR
                         contadorInfo=3;
-                        //SUMEM 1 AL CONTADOR D'ENCERTS
                         enInt++;
                         //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                         encerts.setText(String.valueOf(enInt));
@@ -144,8 +140,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         //FEM VISIBLE 1 DELS RADIOSBUTTONS OCULTATS
                         res3.setVisibility(View.VISIBLE);
                         //LI PASEM LA NOVA PREGUNTA QUE HA DE MOSTRAR
-                        preguntaa.setText("QUINA ÉS LA RELACIÓ ENTRE EL DISSENY DE LA FAÇANA DEL NOU ORGUE I LA CIUTAT DE VALLS?");
-                        //TAMBÉ LI PASEM LES NOVES RESPOSTES
+                        preguntaa.setText("Aneu davant de l'orgue nou i obriu la informació. \n QUINA ÉS LA RELACIÓ ENTRE EL DISSENY DE LA FAÇANA DEL NOU ORGUE I LA CIUTAT DE VALLS?");
+                        //LI PASEM LES NOVES RESPOSTES
                         res1.setText("ELS CALÇOTS I ELS CASTELLS");
                         res2.setText("ELS CASTELLS I EL CAMPANAR");
                         res3.setText("EL CAMPANAR I ELS GEGATS");
@@ -153,20 +149,17 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         imatge.setImageDrawable(getResources().getDrawable(orgue));
 
                     } else {
-                        //SUMEM 1 AL CONTADOR D'INCORRECTES
+                        //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                         erInt++;
-                        //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                         errors.setText(String.valueOf(erInt));
                     }
                     //COMPROVEM EL BOLEA
                 } else if (Preguntes_RadioButton1_3==true){
                     //COMPROVEM QUE EL SEGON RADIOBUTTON ES L'OPCIÓ MARCADA
                     if (res2.isChecked()) {
-                        //DONEM UN VALOR NOU AL CONTADOR
                         contadorInfo=4;
-                        //SUMEM 1 AL CONTADOR D'ENCERTS
-                        enInt++;
                         //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
+                        enInt++;
                         encerts.setText(String.valueOf(enInt));
 
                         //CAMBIEM ELS VALORS DEL BOLEANS
@@ -179,16 +172,15 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         layoutrelacio.setVisibility(View.VISIBLE);
 
                         //LI PASEM LA NOVA PREGUNTA QUE HA DE MOSTRAR
-                        preguntaa.setText("LLEGIU I RELACIONEU CADA TIPUS D’ORGUE AMB LA DEFINICIÓ QUE CREIEU QUE LI CORRESPON.");
+                        preguntaa.setText("Obriu la informació. \n LLEGIU I RELACIONEU CADA TIPUS D’ORGUE AMB LA DEFINICIÓ QUE CREIEU QUE LI CORRESPON.");
                         //POSEM UNA NOVA IMATGE
                         imatge.setImageDrawable(getResources().getDrawable(tiposorgue));
 
                         //CANVIAR IMATGE BOTO SEGÜENT
                         Siguiente.setImageResource(R.drawable.opcions);
                     } else {
-                        //SUMEM 1 AL CONTADOR D'INCORRECTES
+                        //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                         erInt++;
-                        //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                         errors.setText(String.valueOf(erInt));
                     }
                     //COMPROVEM EL BOLEA
@@ -212,12 +204,10 @@ public class PreguntesJoc2 extends AppCompatActivity {
                             rel1 = parent.getItemAtPosition(position);
                             //COMPROVEM QUE L'OBJECTE SIGUI IGUAL QUE L'OPCIO CORRECTA
                             if (rel1.toString().equals("B- ES PORTA A SOBRE MENTRE E TOCA")) {
-                                //SUMEM 1 SI ES SI
                                 contador = contador + 1;
                             } else {
-                                //SUMEM 1 AL CONTADOR D'INCORRECTES
+                                //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                                 erInt++;
-                                //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
                             }
                         }
@@ -238,9 +228,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                                 //SUMEM 1 SI ES SI
                                 contador = contador + 1;
                             } else {
-                                //SUMEM 1 AL CONTADOR D'INCORRECTES
+                                //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                                 erInt++;
-                                //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
                             }
                         }
@@ -259,9 +248,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                                 //SUMEM 1 SI ES SI
                                 contador = contador + 1;
                             } else {
-                                //SUMEM 1 AL CONTADOR D'INCORRECTES
+                                //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                                 erInt++;
-                                //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
                             }
                         }
@@ -280,9 +268,8 @@ public class PreguntesJoc2 extends AppCompatActivity {
                                 //SUMEM 1 SI ES SI
                                 contador = contador + 1;
                             } else {
-                                //SUMEM 1 AL CONTADOR D'INCORRECTES
+                                //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                                 erInt++;
-                                //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                                 errors.setText(String.valueOf(erInt));
                             }
                         }
@@ -308,7 +295,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         layoutrelacio.setVisibility(View.INVISIBLE);
 
                         //POSEM LA NOVA PREGUNTA
-                        preguntaa.setText("MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
+                        preguntaa.setText("Obriu la informació. \n MIREU BÉ LA FAÇANA DE L’ORGUE I TRIEU DE TOTES AQUESTES PARTS LES QUE SÓN VISIBLES.");
                         //POSEM UNA IMATGE NOVA
                         imatge.setImageDrawable(getResources().getDrawable(partsorgue));
                     }
@@ -330,7 +317,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         layoutradiobutton.setVisibility(View.VISIBLE);
                         layoutrelacio.setVisibility(View.INVISIBLE);
                         //PASEM LA NOVA PREGUNTA AMB LES SEVES RESPOSTES
-                        preguntaa.setText("QUINA ÉS LA DIFERÈNCIA ENTRE ORGUENER I ORGANISTA?");
+                        preguntaa.setText("Ja esteu acabant. \n QUINA ÉS LA DIFERÈNCIA ENTRE ORGUENER I ORGANISTA?");
                         res1.setText("NO HI HA CAP DIFERÈNCIA, ÉS EL MATEIX.");
                         res2.setText("L’ORGUENER CONSTRUEIX I L’ORGANISTA TOCA.");
                         res3.setVisibility(View.VISIBLE);
@@ -340,7 +327,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         //POSEM UNA IMATGE NOVA
                         imatge.setImageDrawable(getResources().getDrawable(teclat));
                     } else {
-                        //SUMEM 1 AL CONTADOR D'INCORRECTES I EL MOSTREM
+                        //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                         erInt++;
                         errors.setText(String.valueOf(erInt));
                     }
@@ -376,8 +363,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         //PASEM LA VARIABLE D'ENCERTS I D'ERRORS PER PODER-LA UTILITZAR A L'ALTRE CLASS
                         intent.putExtra("errors", erInt);
                         intent.putExtra("encerts", enInt);
-                        //EXECUTEM INTENT
-                        startActivity(intent);
+                        startActivity(intent); //INICIEM INTENT
                     } else {
                         erInt++;
                         errors.setText(String.valueOf(erInt));
