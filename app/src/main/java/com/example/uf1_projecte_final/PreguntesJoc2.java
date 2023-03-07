@@ -87,7 +87,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
         //DEFINIM IMATGES QUE NECESSITEM
         ImageView imatge = findViewById(R.id.imatgePregunta);
-        int orgue = R.drawable.orge;
+        int orgue = R.drawable.img_orgue3;
         int tiposorgue = R.drawable.tiposorgue;
         int partsorgue = R.drawable.partsorgue;
         int teclat = R.drawable.teclat;

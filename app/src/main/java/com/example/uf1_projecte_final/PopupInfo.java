@@ -65,7 +65,7 @@ public class PopupInfo extends AppCompatActivity {
 
         //AFEGIM LES IMATGES A L'ARRAY D'IMATGES
         int imatge1 = R.drawable.i2;
-        int imatge2 = R.drawable.granorgue;
+        int imatge2 = R.drawable.img_orgue2;
         imatges_inici.add(imatge1);
         imatges_inici.add(imatge2);
     }
