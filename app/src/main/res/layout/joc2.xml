@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/titolCantates"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="#66000000"
@@ -248,7 +248,7 @@
                 android:layout_weight="1" />
 
             <ImageView
-                android:id="@+id/botoInformacio"
+                android:id="@+id/idInfo"
                 android:layout_width="20dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"

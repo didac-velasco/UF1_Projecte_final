@@ -83,7 +83,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
 
         ImageButton Siguiente = (ImageButton) findViewById(R.id.imatgeButtonNext);
 
-        ImageView botoInfo = (ImageView) findViewById(R.id.botoInformacio);
+        ImageView botoInfo = (ImageView) findViewById(R.id.idInfo);
 
         //DEFINIM IMATGES QUE NECESSITEM
         ImageView imatge = findViewById(R.id.imatgePregunta);
