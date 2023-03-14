@@ -47,11 +47,61 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="34dp" />
+            android:layout_height="11dp" />
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="294dp">
+            android:layout_height="319dp">
+
+            <LinearLayout
+                android:id="@+id/layoutImtgesBotons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton1"
+                        style="@style/Theme.imatgebutton"
+                        app:srcCompat="@drawable/i1" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        style="@style/Theme.imatgebutton"
+                        app:srcCompat="@drawable/i2" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        style="@style/Theme.imatgebutton"
+                        app:srcCompat="@drawable/i3" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        style="@style/Theme.imatgebutton"
+                        app:srcCompat="@drawable/i4" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        style="@style/Theme.imatgebutton"
+                        app:srcCompat="@drawable/i5" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        style="@style/Theme.imatgebutton"
+                        app:srcCompat="@drawable/i6" />
+                </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/layoutRadioButtons"
@@ -98,21 +148,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TableRow
-                        style="@style/Theme.tablerow">
+                    <TableRow style="@style/Theme.tablerow">
 
                         <TextView
                             android:id="@+id/tipusorgue1"
                             style="@style/Theme.textview.spinner"
-                            android:text="1- ORGUE PORTATIU"/>
+                            android:text="1- ORGUE PORTATIU" />
 
                         <Spinner
                             android:id="@+id/spinner1"
-                            style="@style/Theme.spinner"/>
+                            style="@style/Theme.spinner" />
                     </TableRow>
 
-                    <TableRow
-                        style="@style/Theme.tablerow">
+                    <TableRow style="@style/Theme.tablerow">
 
                         <TextView
                             android:id="@+id/tipusorgue2"
@@ -121,11 +169,10 @@
 
                         <Spinner
                             android:id="@+id/spinner2"
-                            style="@style/Theme.spinner"/>
+                            style="@style/Theme.spinner" />
                     </TableRow>
 
-                    <TableRow
-                        style="@style/Theme.tablerow">
+                    <TableRow style="@style/Theme.tablerow">
 
                         <TextView
                             android:id="@+id/tipusorgue3"
@@ -134,11 +181,10 @@
 
                         <Spinner
                             android:id="@+id/spinner3"
-                            style="@style/Theme.spinner"/>
+                            style="@style/Theme.spinner" />
                     </TableRow>
 
-                    <TableRow
-                        style="@style/Theme.tablerow">
+                    <TableRow style="@style/Theme.tablerow">
 
                         <TextView
                             android:id="@+id/tipusorgue4"
@@ -147,7 +193,7 @@
 
                         <Spinner
                             android:id="@+id/spinner4"
-                            style="@style/Theme.spinner"/>
+                            style="@style/Theme.spinner" />
                     </TableRow>
                 </TableLayout>
             </LinearLayout>
@@ -161,47 +207,47 @@
                 <CheckBox
                     android:id="@+id/checkBox1"
                     style="@style/Theme.CheckBox"
-                    android:text="BARNILLES"/>
+                    android:text="BARNILLES" />
 
                 <CheckBox
                     android:id="@+id/checkBox2"
                     style="@style/Theme.CheckBox"
-                    android:text="CAIXA DE L’EXPRESSIU"/>
+                    android:text="CAIXA DE L’EXPRESSIU" />
 
                 <CheckBox
                     android:id="@+id/checkBox3"
                     style="@style/Theme.CheckBox"
-                    android:text="MANUALS"/>
+                    android:text="MANUALS" />
 
                 <CheckBox
                     android:id="@+id/checkBox4"
                     style="@style/Theme.CheckBox"
-                    android:text="MANXES"/>
+                    android:text="MANXES" />
 
                 <CheckBox
                     android:id="@+id/checkBox5"
                     style="@style/Theme.CheckBox"
-                    android:text="PEDAL DE L’EXPRESSIU "/>
+                    android:text="PEDAL DE L’EXPRESSIU " />
 
                 <CheckBox
                     android:id="@+id/checkBox6"
                     style="@style/Theme.CheckBox"
-                    android:text="PEDALER"/>
+                    android:text="PEDALER" />
 
                 <CheckBox
                     android:id="@+id/checkBox7"
                     style="@style/Theme.CheckBox"
-                    android:text="POMS DELS REGISTRES"/>
+                    android:text="POMS DELS REGISTRES" />
 
                 <CheckBox
                     android:id="@+id/checkBox8"
                     style="@style/Theme.CheckBox"
-                    android:text="SECRET"/>
+                    android:text="SECRET" />
 
                 <CheckBox
                     android:id="@+id/checkBox9"
                     style="@style/Theme.CheckBox"
-                    android:text="TUBS"/>
+                    android:text="TUBS" />
             </LinearLayout>
 
         </FrameLayout>
