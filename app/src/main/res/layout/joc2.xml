@@ -148,7 +148,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TableRow style="@style/Theme.tablerow">
+                    <TableRow
+                        style="@style/Theme.tablerow"
+                        android:layout_height="37dp">
 
                         <TextView
                             android:id="@+id/tipusorgue1"
