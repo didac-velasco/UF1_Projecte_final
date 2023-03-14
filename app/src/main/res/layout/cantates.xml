@@ -54,8 +54,15 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="83dp"
+            android:layout_height="54dp"
             android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_media_rew" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
@@ -65,11 +72,56 @@
                 app:srcCompat="@android:drawable/ic_media_play" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imageButton8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/next" />
+                app:srcCompat="@android:drawable/ic_media_ff" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/botoInformacio"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#DC6C3F"
+                app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/imatgeButtonNext"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#DC6C3F"
+                app:srcCompat="@android:drawable/ic_media_ff" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
