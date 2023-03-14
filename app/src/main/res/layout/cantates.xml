@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/teclesipedals">
 
     <LinearLayout
         android:layout_width="332dp"
@@ -85,43 +86,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@android:drawable/ic_menu_revert" />
-        <LinearLayout
+
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="27dp" />
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="41dp"
-                android:layout_weight="1" />
+    </LinearLayout>
 
-            <ImageView
-                android:id="@+id/botoInformacio"
-                android:layout_width="20dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="#DC6C3F"
-                app:srcCompat="@android:drawable/ic_menu_info_details" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="642dp">
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_weight="1" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_weight="1" />
 
-            <ImageButton
-                android:id="@+id/imatgeButtonNext"
-                android:layout_width="20dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="#DC6C3F"
-                app:srcCompat="@android:drawable/ic_media_ff" />
+        <ImageView
+            android:id="@+id/botoInformacio"
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#DC6C3F"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
-        </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
