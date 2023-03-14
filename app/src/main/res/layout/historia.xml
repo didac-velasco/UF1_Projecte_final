@@ -15,7 +15,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/titolCantates"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:background="#DC6C3F"

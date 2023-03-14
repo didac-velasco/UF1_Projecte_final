@@ -34,7 +34,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
         EditText encerts = (EditText) findViewById(R.id.idTotalCorrectes);
         EditText errors = (EditText) findViewById(R.id.idErrors);
 
-        ImageView botoInfo = (ImageView) findViewById(R.id.botoInformacio);
+        ImageView botoInfo = (ImageView) findViewById(R.id.idInfo);
 
         //DEFINIM IMATGE
         int orgueantic = R.drawable.orgueantic;
