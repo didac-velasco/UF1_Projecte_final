@@ -41,7 +41,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
 
         //AFEGIM PREGUNTES AL ARRAYLIST
         preguntesArray.add("BUSQUEU AQUEST CARREU I SITUEU-LO AL PLÀNOL. (CAL RESPONDRE PER AVANÇAR");
-        preguntesArray.add("SEGONS LA IMATGE, ON CREIEU QUE ESTAVA SITUAT L'ORGUE ANTERIOR? SITUEU-LO AL PLÀNOL");
+        preguntesArray.add("Ara ja podeu entrar a la nau i continuar amb la visita. SEGONS LA IMATGE, ON CREIEU QUE ESTAVA\n SITUAT L'ORGUE ANTERIOR? SITUEU-LO AL PLÀNOL");
 
         //LI DONEM EL VALOR DE LA POSICIO 0 A LA VARIABLE DE LA PREGUNTA
         omplirPregunta.setText(preguntesArray.get(0));
@@ -54,8 +54,7 @@ public class PreguntesJoc1 extends AppCompatActivity {
                 Intent intent = new Intent( PreguntesJoc1.this, PopupInfo.class);
                 //LI PASEM PER PARAMETRE QUINA INFORMACIÓ VOLEM VEURE
                 intent.putExtra("posicio", 1);
-                //S'EXECUTA INTENT
-                startActivity(intent);
+                startActivity(intent); //INIEM INTENT
             }
         });
 
@@ -65,24 +64,20 @@ public class PreguntesJoc1 extends AppCompatActivity {
             public void onClick(View view) {
                 //MIREM QUE EL CONTADOR SIGI 1
                 if(contadorPreguntes==1){
-                    //SUMEM 1 ALS ENCERTS
-                    encertsInt++;
                     //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
+                    encertsInt++;
                     encerts.setText(String.valueOf(encertsInt));
 
                     //POSEM LA IMATGE NOVA
                     imatgee.setImageDrawable(getResources().getDrawable(orgueantic));
 
-                    //SUMEM 1 A LA VARIABLE DE PREGUNTES
                     idPregunta++;
                     //AGAFEM EL VALOR DE LA VARIABLE IDPREGUNTA I LA PASEM COM HA POSICIÓ PER AGAFAR EL VALOR DE LA POSICIÓ AL ARRAY DE PREGUNTES
                     omplirPregunta.setText(preguntesArray.get(idPregunta));
-                    //SUMEM 1 AL CONTADOR DE PREGUNTES
                     contadorPreguntes++;
                 } else {
-                    //SUMEM 1 AL CONTADOR D'INCORRECTES
+                    //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
                     errorsInt++;
-                    //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
                     errors.setText(String.valueOf(errorsInt));
                 }
             }
@@ -92,23 +87,19 @@ public class PreguntesJoc1 extends AppCompatActivity {
             public void onClick(View view) {
                 //MIREM QUE EL CONTADOR SIGI 2
                 if(contadorPreguntes==2){
-                    //SUMEM 1 ALS ENCERTS
-                    encertsInt++;
                     //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
+                    encertsInt++;
                     encerts.setText(String.valueOf(encertsInt));
 
-                    //CREEM UN INTENT PER PASSAR A LA SEGÜENT PAG AMB ELS ALTRES TIPUS DE PREGUNTES
+                    //CREEM UN INTENT PER PASSAR A LA SEGÜENT CLASSE
                     Intent intent = new Intent( PreguntesJoc1.this, PreguntesJoc2.class);
-                    //PASEM LA VARIABLE D'ERRORS PER PODER-LA UTILITZAR A L'ALTRE CLASS
+                    //PASEM LES VARIABLE D'ERRORS PER PODER-LA UTILITZAR A L'ALTRE CLASS
                     intent.putExtra("errors", errorsInt);
-                    //PASEM LA VARIABLE D'ENCERTS PER PODER-LA UTILITZAR A L'ALTRE CLASS
                     intent.putExtra("encerts", encertsInt);
-                    //EXECUTEM INTENT
-                    startActivity(intent);
+                    startActivity(intent); //INICIEM INTENT
                 } else {
-                    //SUMEM 1 AL CONTADOR D'INCORRECTES
-                    errorsInt++;
                     //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
+                    errorsInt++;
                     errors.setText(String.valueOf(errorsInt));
                 }
             }
