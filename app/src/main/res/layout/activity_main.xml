@@ -24,6 +24,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#66000000"
             android:orientation="vertical">
 
             <TextView
@@ -90,14 +91,16 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="94dp" />
+            android:layout_height="35dp" />
 
-        <ImageView
-            android:id="@+id/btn_preferencies"
-            android:layout_width="56dp"
-            android:layout_height="46dp"
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="72dp"
+            android:layout_height="66dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/configuracio" />
+            android:background="#7CF39F67"
+            app:srcCompat="@drawable/config" />
+
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

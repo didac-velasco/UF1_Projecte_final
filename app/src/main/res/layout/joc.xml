@@ -162,6 +162,10 @@
                             style="@style/Theme.spinner" />
                     </TableRow>
 
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="11dp" />
+
                     <TableRow style="@style/Theme.tablerow">
 
                         <TextView
@@ -174,6 +178,10 @@
                             style="@style/Theme.spinner" />
                     </TableRow>
 
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="11dp" />
+
                     <TableRow style="@style/Theme.tablerow">
 
                         <TextView
@@ -185,6 +193,10 @@
                             android:id="@+id/spinner3"
                             style="@style/Theme.spinner" />
                     </TableRow>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="11dp" />
 
                     <TableRow style="@style/Theme.tablerow">
 
