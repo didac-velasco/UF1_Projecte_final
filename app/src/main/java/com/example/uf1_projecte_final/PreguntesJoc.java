@@ -130,7 +130,7 @@ public class PreguntesJoc extends AppCompatActivity {
                         //LI PASEM LES NOVES RESPOSTES
                         res1.setText("ELS CALÇOTS I ELS CASTELLS");
                         res2.setText("ELS CASTELLS I EL CAMPANAR");
-                        res3.setText("EL CAMPANAR I ELS GEGATS");
+                        res3.setText("EL CAMPANAR I ELS GEGANTS");
                         //POSEM UNA IMATGE NOVA
                         imatge.setImageDrawable(getResources().getDrawable(orgue));
 
