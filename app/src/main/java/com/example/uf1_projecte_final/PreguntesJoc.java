@@ -19,11 +19,9 @@ import android.widget.TextView;
 public class PreguntesJoc extends AppCompatActivity {
     int erInt, enInt;
     int contador = 0, contadorInfo=2, contadorPreguntes=1;
-
     Object rel1, rel2, rel3, rel4;
     Boolean Preguntes_ImatgeBotons = true, Preguntes_RadioButton4_2 = false, Preguntes_RadioButton3_3 = false,
-            Preguntes_RadioButton1_3 = false, Preguntes_Spinner = false, Preguntes_RadioButton2_4 = false,
-            Preguntes_CheckBox = false;
+            Preguntes_RadioButton1_3 = false, Preguntes_Spinner = false, Preguntes_RadioButton2_4 = false, Preguntes_CheckBox = false;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +50,6 @@ public class PreguntesJoc extends AppCompatActivity {
         layoutCaselles.setVisibility(View.INVISIBLE);
 
         TextView preguntaa = findViewById(R.id.textViewPregunta);
-
-        RadioGroup grup=(RadioGroup) findViewById(R.id.radiogroup);
 
         RadioButton res1 = (RadioButton) findViewById(R.id.rb1);
         RadioButton res2 = (RadioButton) findViewById(R.id.rb2);
