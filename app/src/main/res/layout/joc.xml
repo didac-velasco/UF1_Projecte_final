@@ -43,7 +43,7 @@
             android:id="@+id/imatgePregunta"
             android:layout_width="match_parent"
             android:layout_height="175dp"
-            app:srcCompat="@drawable/orgueantic" />
+            app:srcCompat="@drawable/p1" />
 
         <Space
             android:layout_width="match_parent"
