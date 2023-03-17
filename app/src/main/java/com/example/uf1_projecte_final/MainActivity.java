@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //CREEM EL INTENT QUE ENS PORTARA A LA PAG PER COMENÇAR EL JOC
-                Intent intent = new Intent( MainActivity.this, PreguntesJoc1.class);
+                Intent intent = new Intent( MainActivity.this, PreguntesJoc.class);
                 //S'EXECUTA L'INTENT
                 startActivity(intent);
             }

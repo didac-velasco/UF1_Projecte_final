@@ -32,7 +32,7 @@
             android:name=".PreguntesJoc1"
             android:exported="true"></activity>
         <activity
-            android:name=".PreguntesJoc2"
+            android:name=".PreguntesJoc"
             android:exported="true"></activity>
         <activity
             android:name=".Historia"

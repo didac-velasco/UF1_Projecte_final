@@ -10,11 +10,9 @@ import java.util.ArrayList;
 public class PopupInfo extends AppCompatActivity {
 
     private ArrayList<String> informacio = new ArrayList();
-    private ArrayList<String> inici = new ArrayList();
 
     private ArrayList<Integer> imatges_inici = new ArrayList();
     Bundle bundle;
-    Bundle bundleinicial;
 
     int pos;
 
@@ -49,19 +47,6 @@ public class PopupInfo extends AppCompatActivity {
         TextView popup = findViewById(R.id.textView13);
         //LI PASEM LA POSICIÓ I MOSTRA EL CONTINGUT
         popup.setText(informacio.get(pos));
-
-        //AFEGIM L'INFORMACIÓ INICIAL A L'ARRAYLIST
-        bundleinicial= getIntent().getExtras();
-        inici.add("Benvinguts a la visita. Aquesta aplicació us anira guiant per a descobrir aquest instrument.");
-        inici.add("Ara ja podeu entrar a la nau i continuar amb la visita. Durant la visita haureu d’anar-vos fixant si hi ha recordatoris referents a la ciutat tal com hem vist a fora. Quantifiqueu-los i al final del recorregut trieu la resposta correcta.");
-        inici.add("Ara aneu al lloc, busqueu el codi i obriu la informació.");
-        inici.add("Aneu a la ubicació que mostra el plànol. Es visualitza la imatge del nou orgue");
-        inici.add("Es visualitza el plànol amb la ubicació de la següent activitat.");
-        inici.add("Aneu a la ubicació que mostra el plànol i obriu el boto d'informació.");
-        inici.add("Ja sabeu força coses sobre aquest instrument. Aneu a la nova ubicació per continuar amb l’activitat.");
-        inici.add("Ja esteu acabant. Aneu a obrir el codi que us completarà la informació sobre aquest instrument.");
-        inici.add("Heu recordat de comptar els escuts de la ciutat? Ara podeu donar la resposta.");
-        inici.add("Voleu escoltar com sona?");
 
         //AFEGIM LES IMATGES A L'ARRAY D'IMATGES
         int imatge1 = R.drawable.i2;

@@ -1,6 +1,5 @@
 package com.example.uf1_projecte_final;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,39 +16,22 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class PreguntesJoc2 extends AppCompatActivity {
-    Bundle bundle;
+public class PreguntesJoc extends AppCompatActivity {
     int erInt, enInt;
-
-    LinearLayout layoutradiobutton, layoutrelacio, layoutCaselles;
-
-    int contador = 0, contadorInfo=2;
-
-    boolean totes = false;
-    boolean precerta = false;
+    int contador = 0, contadorInfo=1, contadorPreguntes=1;
     Object rel1, rel2, rel3, rel4;
-    Boolean Preguntes_RadioButton4_2 = true;
-    Boolean Preguntes_RadioButton1_3 = false;
-    Boolean Preguntes_Spinner = false;
-    Boolean Preguntes_CheckBox = false;
-    Boolean Preguntes_RadioButton2_4 = false;
-    Boolean Preguntes_RadioButton3_3 = false;
-    @SuppressLint("MissingInflatedId")
+    Boolean Preguntes_ImatgeBotons = true, Preguntes_RadioButton4_2 = false, Preguntes_RadioButton3_3 = false,
+            Preguntes_RadioButton1_3 = false, Preguntes_Spinner = false, Preguntes_RadioButton2_4 = false, Preguntes_CheckBox = false;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.joc2);
-
-        //RECUPEREM LES VARIABLES DE PREGUNTES CORRES I D'INCORRECTES
-
-        bundle = getIntent().getExtras();
-        erInt = bundle.getInt("errors");
-        enInt = bundle.getInt("encerts");
+        setContentView(R.layout.joc);
 
         //RECUPEREM ELS VALOR DEL ELEMENTS DE LA PAG
-
-        layoutradiobutton = (LinearLayout) findViewById(R.id.layoutRadioButtons);
-        layoutrelacio = (LinearLayout) findViewById(R.id.layoutrelacionar);
-        layoutCaselles = (LinearLayout) findViewById(R.id.layoutCheckbox);
+        LinearLayout layoutradiobutton = (LinearLayout) findViewById(R.id.layoutRadioButtons);
+        LinearLayout layoutrelacio = (LinearLayout) findViewById(R.id.layoutrelacionar);
+        LinearLayout  layoutCaselles = (LinearLayout) findViewById(R.id.layoutCheckbox);
+        LinearLayout layoutImg = (LinearLayout) findViewById(R.id.layoutImtgesBotons);
 
         //PASEM ELS SPINNER DE ANDROID A JAVA
         Spinner desp1 = findViewById(R.id.spinner1);
@@ -62,13 +44,12 @@ public class PreguntesJoc2 extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
 
         //AQUI DIEM QUIN LAYOUT VOLEM QUE ES VEIGI O NO
-        layoutradiobutton.setVisibility(View.VISIBLE);
+        layoutImg.setVisibility(View.VISIBLE);
+        layoutradiobutton.setVisibility(View.INVISIBLE);
         layoutrelacio.setVisibility(View.INVISIBLE);
         layoutCaselles.setVisibility(View.INVISIBLE);
 
         TextView preguntaa = findViewById(R.id.textViewPregunta);
-
-        RadioGroup grup=(RadioGroup) findViewById(R.id.radiogroup);
 
         RadioButton res1 = (RadioButton) findViewById(R.id.rb1);
         RadioButton res2 = (RadioButton) findViewById(R.id.rb2);
@@ -81,12 +62,21 @@ public class PreguntesJoc2 extends AppCompatActivity {
         CheckBox cb7 = (CheckBox) findViewById(R.id.checkBox7);
         CheckBox cb9 = (CheckBox) findViewById(R.id.checkBox9);
 
+        //preguntes dels botons, recuperem botons
+        ImageButton btnimageButton1 = (ImageButton) findViewById(R.id.imageButton1);
+        ImageButton btnimageButton2 = (ImageButton) findViewById(R.id.imageButton2);
+        ImageButton btnimageButton3 = (ImageButton) findViewById(R.id.imageButton3);
+        ImageButton btnimageButton4 = (ImageButton) findViewById(R.id.imageButton4);
+        ImageButton btnimageButton5 = (ImageButton) findViewById(R.id.imageButton5);
+        ImageButton btnimageButton6 = (ImageButton) findViewById(R.id.imageButton6);
+
         ImageButton Siguiente = (ImageButton) findViewById(R.id.imatgeButtonNext);
 
         ImageView botoInfo = (ImageView) findViewById(R.id.idInfo);
 
         //DEFINIM IMATGES QUE NECESSITEM
         ImageView imatge = findViewById(R.id.imatgePregunta);
+        int orgueantic = R.drawable.orgueantic;
         int orgue = R.drawable.img_orgue3;
         int tiposorgue = R.drawable.tiposorgue;
         int partsorgue = R.drawable.partsorgue;
@@ -99,22 +89,12 @@ public class PreguntesJoc2 extends AppCompatActivity {
         encerts.setText(String.valueOf(enInt));
         errors.setText(String.valueOf(erInt));
 
-
-        //LI PASEM LA NOVA PREGUNTA QUE HA DE MOSTRAR
-        preguntaa.setText("Ara aneu al lloc anterior i obriu la informació. OBSERVEU BÉ LA IMATGE I RESPONEU");
-        //TAMBÉ LI PASEM LES SEVES RESPOSTES
-        res1.setText("ESTÀ ARRAN DE TERRA");
-        res2.setText("ESTÀ SUSPÉS EN UNA BALCONADA");
-        //OCULTEM AQUESTS DOS RADIOBUTTONS PERQUE NO ELS UTILITZEM
-        res3.setVisibility(View.INVISIBLE);
-        res4.setVisibility(View.INVISIBLE);
-
         //ACCIO A L'APRETAR EL BOTO D'INFORMACIÓ
         botoInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //INTENT QUE EXECUTARA EL POPUP AMB L'INFORMACIÓ
-                Intent intent = new Intent( PreguntesJoc2.this, PopupInfo.class);
+                Intent intent = new Intent( PreguntesJoc.this, PopupInfo.class);
                 //LI PASEM PER PARAMETRE QUINA INFORMACIÓ VOLEM VEURE
                 intent.putExtra("posicio", contadorInfo);
                 startActivity(intent); //INICIEM INTENT
@@ -144,7 +124,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         //LI PASEM LES NOVES RESPOSTES
                         res1.setText("ELS CALÇOTS I ELS CASTELLS");
                         res2.setText("ELS CASTELLS I EL CAMPANAR");
-                        res3.setText("EL CAMPANAR I ELS GEGATS");
+                        res3.setText("EL CAMPANAR I ELS GEGANTS");
                         //POSEM UNA IMATGE NOVA
                         imatge.setImageDrawable(getResources().getDrawable(orgue));
 
@@ -213,9 +193,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         }
 
                         //AQUESTA FUNCIÓ ES BUIDA PERQUE EN EL NOSTRE CAS NO L'UTILITZEM, PERO ES OBLIGATORIA TENIR-LA, JA QUE VA JUNTA AMB L'ANTERIOR
-                        public void onNothingSelected(AdapterView<?> parent) {
-
-                        }
+                        public void onNothingSelected(AdapterView<?> parent) {}
                     });
 
                     //S'HA TRIAT UNA OPCIÓ
@@ -234,9 +212,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                             }
                         }
 
-                        public void onNothingSelected(AdapterView<?> parent) {
-
-                        }
+                        public void onNothingSelected(AdapterView<?> parent) {}
                     });
 
                     desp3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -254,9 +230,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                             }
                         }
 
-                        public void onNothingSelected(AdapterView<?> parent) {
-
-                        }
+                        public void onNothingSelected(AdapterView<?> parent) {}
                     });
 
                     desp4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -359,7 +333,7 @@ public class PreguntesJoc2 extends AppCompatActivity {
                         Preguntes_RadioButton3_3=false;
 
                         //CREEM UN INTENT NOU QUE ENS PASARA A LA PAG FINAL
-                        Intent intent = new Intent( PreguntesJoc2.this, finalJoc.class);
+                        Intent intent = new Intent( PreguntesJoc.this, finalJoc.class);
                         //PASEM LA VARIABLE D'ENCERTS I D'ERRORS PER PODER-LA UTILITZAR A L'ALTRE CLASS
                         intent.putExtra("errors", erInt);
                         intent.putExtra("encerts", enInt);
@@ -371,5 +345,88 @@ public class PreguntesJoc2 extends AppCompatActivity {
                 }
             }
         });
+        if (Preguntes_ImatgeBotons==true) {
+            btnimageButton1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //MIREM QUE EL CONTADOR SIGI 1
+                    if (contadorPreguntes == 1) {
+                        //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
+                        enInt++;
+                        encerts.setText(String.valueOf(enInt));
+
+                        contadorPreguntes++;
+
+                        //preparem següent pregunta
+                        imatge.setImageDrawable(getResources().getDrawable(orgueantic));
+                        preguntaa.setText("Ara ja podeu entrar a la nau i continuar amb la visita. SEGONS LA IMATGE, ON CREIEU QUE ESTAVA\n SITUAT L'ORGUE ANTERIOR? SITUEU-LO AL PLÀNOL");
+
+                    } else {
+                        //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
+                        erInt++;
+                        errors.setText(String.valueOf(erInt));
+                    }
+                }
+            });
+            btnimageButton2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //MIREM QUE EL CONTADOR SIGI 2
+                    if (contadorPreguntes == 2) {
+                        //ACTUALITZEM VARIABLE ENCERTS I ES MOSTRA
+                        enInt++;
+                        encerts.setText(String.valueOf(enInt));
+
+                        //preparem nova pregunta
+                        //LI PASEM LA NOVA PREGUNTA QUE HA DE MOSTRAR
+                        preguntaa.setText("Ara aneu al lloc anterior i obriu la informació. OBSERVEU BÉ LA IMATGE I RESPONEU");
+                        //TAMBÉ LI PASEM LES SEVES RESPOSTES
+                        res1.setText("ESTÀ ARRAN DE TERRA");
+                        res2.setText("ESTÀ SUSPÉS EN UNA BALCONADA");
+                        //OCULTEM AQUESTS DOS RADIOBUTTONS PERQUE NO ELS UTILITZEM
+                        layoutImg.setVisibility(View.INVISIBLE);
+                        layoutradiobutton.setVisibility(View.VISIBLE);
+                        res3.setVisibility(View.INVISIBLE);
+                        res4.setVisibility(View.INVISIBLE);
+
+                        //CAMBIEM ELS VALORS DEL BOLEANS
+                        Preguntes_ImatgeBotons = false;
+                        Preguntes_RadioButton4_2 = true;
+                    } else {
+                        //ACTUALITZEM VARIABLE D'INCORRECTES I ES MOSTRA
+                        erInt++;
+                        errors.setText(String.valueOf(erInt));
+                    }
+                }
+            });
+            btnimageButton3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    erInt++;
+                    errors.setText(String.valueOf(erInt));
+                }
+            });
+            btnimageButton4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    erInt++;
+                    errors.setText(String.valueOf(erInt));
+                }
+            });
+            btnimageButton5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    erInt++;
+                    errors.setText(String.valueOf(erInt));
+                }
+            });
+            btnimageButton6.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    erInt++;
+                    errors.setText(String.valueOf(erInt));
+                }
+            });
+        }
     }
 }
