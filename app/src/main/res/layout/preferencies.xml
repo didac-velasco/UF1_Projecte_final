@@ -12,61 +12,97 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="32dp" />
+            android:layout_height="28dp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PREFERÈNCIES"
-            android:background="#66000000"
+            android:background="#7E000000"
             android:gravity="center"
+            android:text="PREFERÈNCIES"
             android:textColor="#FAF8F8"
             android:textSize="24sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical">
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="29dp" />
 
             <TextView
                 android:id="@+id/textView18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="EFECTES DE SO" />
+                android:background="#7E000000"
+                android:text="EFECTES DE SO"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textIsSelectable="false"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="13dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="236dp"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#74D98F50"
+                    app:srcCompat="@drawable/on" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="13dp" />
+
+                <ImageButton
                     android:id="@+id/imageButton9"
-                    android:layout_width="91dp"
-                    android:layout_height="81dp"
-                    app:srcCompat="@drawable/sonidoon" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#74D98F50"
+                    app:srcCompat="@drawable/off" />
             </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="39dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#66000000"
+                android:text="GUARDAR ESTAT DEL JOC"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textIsSelectable="false"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="21dp" />
+
+            <ImageButton
+                android:id="@+id/imageButton15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#74D98F50"
+                app:srcCompat="@drawable/guardar" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="150dp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
