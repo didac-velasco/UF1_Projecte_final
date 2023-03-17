@@ -34,13 +34,13 @@
             android:id="@+id/pCorrectes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#B2000000"
             android:gravity="center"
-            android:background="#66000000"
             android:text="TOTAL PREGUNTES CORRECTES:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#4CAF50"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idEncerts"
@@ -61,13 +61,13 @@
             android:id="@+id/pIncorrecte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#B2000000"
             android:gravity="center"
-            android:background="#66000000"
             android:text="TOTAL PREGUNTES INCORRECTES:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#F10C0C"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idErrors"
@@ -88,13 +88,13 @@
             android:id="@+id/TotalCorrectes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#B2000000"
             android:gravity="center"
-            android:background="#66000000"
             android:text="% DE PREGUNTES CORRECTES:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#4CAF50"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idTotalCorrectes"
@@ -115,13 +115,13 @@
             android:id="@+id/pIncorrecte2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#B2000000"
             android:gravity="center"
-            android:background="#66000000"
             android:text="% DE PREGUNTES INCORRECTES:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#F10C0C"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/idTotalIncorrectes"
