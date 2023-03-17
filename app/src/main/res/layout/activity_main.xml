@@ -94,7 +94,7 @@
             android:layout_height="35dp" />
 
         <ImageButton
-            android:id="@+id/imageButton8"
+            android:id="@+id/btn_preferencies"
             android:layout_width="72dp"
             android:layout_height="66dp"
             android:layout_gravity="center"

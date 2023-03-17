@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Button b_historia = (Button) findViewById(R.id.btn_historia);
         Button b_joc = (Button) findViewById(R.id.btn_inici_joc);
         Button b_musica = (Button) findViewById(R.id.btn_musica);
-        //Button b_preferencies = (Button) findViewById(R.id.btn_preferencies);
+        ImageButton b_preferencies = (ImageButton) findViewById(R.id.btn_preferencies);
 
         //ACCIÓ AL FER CLICK AL BOTO DE COMENÇAR
         b_joc.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent); //executar intent
             }
         });
-/*
+
         b_preferencies.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,6 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent); //executar intent
             }
         });
-*/
+
     }
 }
