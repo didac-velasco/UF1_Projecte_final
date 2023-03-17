@@ -17,11 +17,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class PreguntesJoc extends AppCompatActivity {
-    Bundle bundle;
     int erInt, enInt;
     int contador = 0, contadorInfo=2, contadorPreguntes=1;
 
-    boolean totes = false, precerta = false;
     Object rel1, rel2, rel3, rel4;
     Boolean Preguntes_ImatgeBotons = true, Preguntes_RadioButton4_2 = false, Preguntes_RadioButton3_3 = false,
             Preguntes_RadioButton1_3 = false, Preguntes_Spinner = false, Preguntes_RadioButton2_4 = false,
@@ -199,9 +197,7 @@ public class PreguntesJoc extends AppCompatActivity {
                         }
 
                         //AQUESTA FUNCIÓ ES BUIDA PERQUE EN EL NOSTRE CAS NO L'UTILITZEM, PERO ES OBLIGATORIA TENIR-LA, JA QUE VA JUNTA AMB L'ANTERIOR
-                        public void onNothingSelected(AdapterView<?> parent) {
-
-                        }
+                        public void onNothingSelected(AdapterView<?> parent) {}
                     });
 
                     //S'HA TRIAT UNA OPCIÓ
@@ -220,9 +216,7 @@ public class PreguntesJoc extends AppCompatActivity {
                             }
                         }
 
-                        public void onNothingSelected(AdapterView<?> parent) {
-
-                        }
+                        public void onNothingSelected(AdapterView<?> parent) {}
                     });
 
                     desp3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -240,9 +234,7 @@ public class PreguntesJoc extends AppCompatActivity {
                             }
                         }
 
-                        public void onNothingSelected(AdapterView<?> parent) {
-
-                        }
+                        public void onNothingSelected(AdapterView<?> parent) {}
                     });
 
                     desp4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
