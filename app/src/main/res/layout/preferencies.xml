@@ -54,7 +54,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/imageButton8"
+                    android:id="@+id/botoSo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#74D98F50"
@@ -65,7 +65,7 @@
                     android:layout_height="13dp" />
 
                 <ImageButton
-                    android:id="@+id/imageButton9"
+                    android:id="@+id/botoNoSo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#74D98F50"
@@ -93,7 +93,7 @@
                 android:layout_height="21dp" />
 
             <ImageButton
-                android:id="@+id/imageButton15"
+                android:id="@+id/botoRecargar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#74D98F50"
