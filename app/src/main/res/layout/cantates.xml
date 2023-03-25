@@ -56,13 +56,19 @@
             android:layout_height="17dp" />
 
         <ImageButton
-            android:id="@+id/idControlMusica"
+            android:id="@+id/btnPlay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@android:drawable/ic_media_play" />
 
         <ImageButton
-            android:id="@+id/idTornarComencar"
+            android:id="@+id/btnPause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_media_pause" />
+
+        <ImageButton
+            android:id="@+id/btnReset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@android:drawable/ic_menu_revert" />

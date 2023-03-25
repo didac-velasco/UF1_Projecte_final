@@ -6,45 +6,42 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class Cantates extends AppCompatActivity {
+    private MediaPlayer mediaPlayer;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cantates);
 
         ImageView botoInfo = (ImageView) findViewById(R.id.idInfo);
 
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
-        ImageButton control = (ImageButton) findViewById(R.id.idControlMusica);
-        ImageButton reiniciar = (ImageButton) findViewById(R.id.idTornarComencar);
+        mediaPlayer = MediaPlayer.create(this, R.raw.cantata);
 
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.cantata);
-
-        boolean controlMusica = true;
-        
-        if (controlMusica==true){
-            controlMusica=false;
-        } else {
-            controlMusica=true;
-        }
-        boolean FinalcontrolMusica = controlMusica;
-        control.setOnClickListener(new View.OnClickListener() {
+        ImageButton playButton = findViewById(R.id.btnPlay);
+        playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (FinalcontrolMusica ==true){
-                    mediaPlayer.start();
-                } else {
-                    mediaPlayer.pause();
-                }
+                mediaPlayer.start();
             }
         });
 
-        reiniciar.setOnClickListener(new View.OnClickListener() {
+        ImageButton pauseButton = findViewById(R.id.btnPause);
+        pauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaPlayer.reset();
+                mediaPlayer.pause();
+            }
+        });
+
+        ImageButton restartButton = findViewById(R.id.btnReset);
+        restartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mediaPlayer.seekTo(0);
+                mediaPlayer.start();
             }
         });
 
@@ -60,4 +57,14 @@ public class Cantates extends AppCompatActivity {
         });
 
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
 }
+

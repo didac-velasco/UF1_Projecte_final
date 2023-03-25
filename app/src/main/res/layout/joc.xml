@@ -109,6 +109,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp" />
+
                 <RadioGroup
                     android:id="@+id/radiogroup"
                     android:layout_width="match_parent"
@@ -143,6 +147,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp" />
 
                 <TableLayout
                     android:layout_width="match_parent"
