@@ -9,9 +9,15 @@
     <LinearLayout
         android:layout_width="329dp"
         android:layout_height="121dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="570dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -49,33 +55,11 @@
             android:layout_width="match_parent"
             android:layout_height="17dp" />
 
-        <LinearLayout
+        <ImageButton
+            android:id="@+id/idControlMusica"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/idTirarEnrere"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@android:drawable/ic_media_rew" />
-
-            <ImageButton
-                android:id="@+id/idPararMusica"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@android:drawable/ic_media_play" />
-
-            <ImageButton
-                android:id="@+id/idSeguentMusica"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@android:drawable/ic_media_ff" />
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_media_play" />
 
         <ImageButton
             android:id="@+id/idTornarComencar"
@@ -85,7 +69,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="27dp" />
+            android:layout_height="47dp" />
 
     </LinearLayout>
 

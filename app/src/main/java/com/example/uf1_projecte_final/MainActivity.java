@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //CREEM EL INTENT QUE ENS PORTARA A LA PAG D'HISTORIA
-                Intent intent = new Intent( MainActivity.this, Historia.class);
+                Intent intent = new Intent( MainActivity.this, Cantates.class);
                 //S'EXECUTA L'INTENT
                 startActivity(intent); //executar intent
             }

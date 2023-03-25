@@ -43,6 +43,7 @@ public class PopupInfo extends AppCompatActivity {
         informacio.add("L’orgue és un instrument de vent, això vol dir que el so el produeix l’aire quan vibra en passar pels tubs. Aquest instrument tan gran té unes parts visibles, la façana i la consola, i unes parts que estan a l’interior i que són els mecanismes que fan que l’orgue soni. La consola és el centre de comandament de la persona que toca l’instrument.");
         informacio.add("Aquest orgue en l’actualitat consta de 1384 tubs però està preparat per a tenir-ne 2504. Cada tecla té associat, com a mínim,  un tub per a cada un dels registres que es puguin activar.Recordeu que la recuperació i construcció ha estat possible gràcies a les donacions de gent particular, empreses de la ciutat i les administracions.Hi ha dos tipus de tubs segons la manera de produir el so: els de boca o labials i els de llengüeta.  També  la mida, la forma i els materials dels que estan fets els tubs donen una sonoritat diferent segons el que es requereix per a cada un dels registres.");
         informacio.add("A partir d'ara la Ciutat comptarà amb un intrument ubicat en aquest espai tan gran i que està pensat que tingui diferents usos: Concerts, acompanyament a la litúrgia i aprenentatge i estudi de l'instrument.");
+        informacio.add("Aquesta cantata ha estat gravada durant l'any 2023.");
 
         TextView popup = findViewById(R.id.textView13);
         //LI PASEM LA POSICIÓ I MOSTRA EL CONTINGUT
