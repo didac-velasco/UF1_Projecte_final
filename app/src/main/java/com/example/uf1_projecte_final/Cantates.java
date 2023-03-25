@@ -16,11 +16,16 @@ public class Cantates extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cantates);
 
+        //declarem les diferents imatges
         ImageView botoInfo = (ImageView) findViewById(R.id.idInfo);
+        ImageButton playButton = findViewById(R.id.btnPlay);
+        ImageButton pauseButton = findViewById(R.id.btnPause);
+        ImageButton restartButton = findViewById(R.id.btnReset);
 
+        //recuperem la cantata
         mediaPlayer = MediaPlayer.create(this, R.raw.cantata);
 
-        ImageButton playButton = findViewById(R.id.btnPlay);
+        //si fem click en aquest botó iniciem la música
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,7 +33,7 @@ public class Cantates extends AppCompatActivity {
             }
         });
 
-        ImageButton pauseButton = findViewById(R.id.btnPause);
+        //si fem click en aquest botó pausem la música
         pauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +41,7 @@ public class Cantates extends AppCompatActivity {
             }
         });
 
-        ImageButton restartButton = findViewById(R.id.btnReset);
+        //si fem click en aquest botó recetegem i tornem a començar la música
         restartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,14 +50,15 @@ public class Cantates extends AppCompatActivity {
             }
         });
 
+        //si fem click en aquest botó s'ens mostra el PopUp de la informació
         botoInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //INTENT QUE EXECUTARA EL POPUP AMB L'INFORMACIÓ
+                //Intent que reenvia a la classe PopupInfo
                 Intent intent = new Intent( Cantates.this, PopupInfo.class);
-                //LI PASEM PER PARAMETRE QUINA INFORMACIÓ VOLEM VEURE
+                //passem per parametre la posicio de la informació
                 intent.putExtra("posicio", 8);
-                startActivity(intent); //INICIEM INTENT
+                startActivity(intent); //executem intent
             }
         });
 

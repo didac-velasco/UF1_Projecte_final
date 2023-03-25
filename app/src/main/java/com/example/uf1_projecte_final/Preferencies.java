@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Preferencies extends AppCompatActivity {
+    public static int So = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +18,19 @@ public class Preferencies extends AppCompatActivity {
 
         ImageButton b_So = (ImageButton) findViewById(R.id.botoSo);
         ImageButton b_NoSo = (ImageButton) findViewById(R.id.botoNoSo);
-        ImageButton b_Recetejar = (ImageButton) findViewById(R.id.botoRecargar);
+
+        b_So.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                So=0;
+            }
+        });
+
+        b_NoSo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                So=1;
+            }
+        });
     }
 }

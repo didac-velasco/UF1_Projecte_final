@@ -1,6 +1,7 @@
 package com.example.uf1_projecte_final;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
@@ -22,14 +23,15 @@ public class MainActivity extends AppCompatActivity {
         ImageButton b_preferencies = (ImageButton) findViewById(R.id.btn_preferencies);
 
         SoundPool soBotons = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-
         int soBoto1 = soBotons.load(this, R.raw.so_botons, 1);
 
         //ACCIÓ AL FER CLICK AL BOTO DE COMENÇAR
         b_joc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soBotons.play(soBoto1, 1.0f, 1.0f, 1, 0, 1.0f);
+                if (Preferencies.So==0) {
+                    soBotons.play(soBoto1, 1.0f, 1.0f, 1, 0, 1.0f);
+                }
                 //CREEM EL INTENT QUE ENS PORTARA A LA PAG PER COMENÇAR EL JOC
                 Intent intent = new Intent( MainActivity.this, PreguntesJoc.class);
                 //S'EXECUTA L'INTENT
@@ -41,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
         b_historia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soBotons.play(soBoto1, 1.0f, 1.0f, 1, 0, 1.0f);
+                if (Preferencies.So==0) {
+                    soBotons.play(soBoto1, 1.0f, 1.0f, 1, 0, 1.0f);
+                }
                 //CREEM EL INTENT QUE ENS PORTARA A LA PAG D'HISTORIA
                 Intent intent = new Intent( MainActivity.this, Historia.class);
                 //S'EXECUTA L'INTENT
@@ -52,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
         b_musica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soBotons.play(soBoto1, 1.0f, 1.0f, 1, 0, 1.0f);
+                if (Preferencies.So==0) {
+                    soBotons.play(soBoto1, 1.0f, 1.0f, 1, 0, 1.0f);
+                }
                 //CREEM EL INTENT QUE ENS PORTARA A LA PAG D'HISTORIA
                 Intent intent = new Intent( MainActivity.this, Cantates.class);
                 //S'EXECUTA L'INTENT
@@ -63,7 +69,9 @@ public class MainActivity extends AppCompatActivity {
         b_preferencies.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                soBotons.play(soBoto1, 1.0f, 1.0f, 1, 0, 1.0f);
+                if (Preferencies.So==0) {
+                    soBotons.play(soBoto1, 1.0f, 1.0f, 1, 0, 1.0f);
+                }
                 //CREEM EL INTENT QUE ENS PORTARA A LA PAG D'HISTORIA
                 Intent intent = new Intent( MainActivity.this, Preferencies.class);
                 //S'EXECUTA L'INTENT
