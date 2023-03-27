@@ -10,15 +10,18 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Preferencies extends AppCompatActivity {
+    //creem una variable estatica
     public static int So = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.preferencies);
 
+        //recuperem valors de les imatges
         ImageButton b_So = (ImageButton) findViewById(R.id.botoSo);
         ImageButton b_NoSo = (ImageButton) findViewById(R.id.botoNoSo);
 
+        //si fem click en aquest botó posem la variable So a 0
         b_So.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,6 +29,7 @@ public class Preferencies extends AppCompatActivity {
             }
         });
 
+        //si fem click en aquest botó posem la variable So a 1
         b_NoSo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
