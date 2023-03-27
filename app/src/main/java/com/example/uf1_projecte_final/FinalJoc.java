@@ -9,33 +9,32 @@ import android.widget.EditText;
 
 public class FinalJoc extends AppCompatActivity {
     Bundle bundle;
-    int erInt, enInt, Pencerts, Perrors, suma;
+    int erInt, enInt;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.final_joc);
-        //OBTENIM ELS VALORS DE LES VARIABLES
+
+        //declarem els diferents elements
+        Button boto = (Button) findViewById(R.id.button);
+        EditText encerts = (EditText) findViewById(R.id.idEncerts);
+        EditText errors = (EditText) findViewById(R.id.idErrors);
+
+        //obtenim els valors de les variables errors i encerts que passem per l'intent
         bundle = getIntent().getExtras();
         erInt = bundle.getInt("errors");
         enInt = bundle.getInt("encerts");
 
-        Button boto = (Button) findViewById(R.id.button);
-
-        EditText encerts = (EditText) findViewById(R.id.idEncerts);
-        //DONEM EL TOTAL D'ENCERTS
+        //afegim per pantalla els valors
         encerts.setText(String.valueOf(enInt));
-        EditText errors = (EditText) findViewById(R.id.idErrors);
-        //DONEM EL TOTAL D'INCORRECTES
         errors.setText(String.valueOf(erInt));
 
-
-        //ACCIÓ BOTO TORNAR INICI
+        //si fem click en aquest botó tornem al MainActivity
         boto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //CREEM UN INTENT QUE ENS PORTARA A LA PAG INICIAL
+                //intent que reenvia a la classe MainActivity
                 Intent intent = new Intent( FinalJoc.this, MainActivity.class);
-                //EXECUTEM INTENT
-                startActivity(intent);
+                startActivity(intent); //executem intent
             }
         });
     }

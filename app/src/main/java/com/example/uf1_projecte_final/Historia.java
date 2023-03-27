@@ -10,7 +10,6 @@ import android.widget.Toast;
 public class Historia extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //MOSTREM LA PAG AMB TOTA L'HISTORIA
-        setContentView(R.layout.historia);
+        setContentView(R.layout.historia); //mostrem el layout d'historia
     }
 }

@@ -63,7 +63,8 @@ public class Cantates extends AppCompatActivity {
         });
 
     }
-    //
+
+    //borrem els recurssos de la reproduccio
     @Override
     protected void onStop() {
         super.onStop();

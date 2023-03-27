@@ -9,32 +9,34 @@ import java.util.ArrayList;
 
 public class PopupInfo extends AppCompatActivity {
 
+    //declarem variables
     private ArrayList<String> informacio = new ArrayList();
-
     private ArrayList<Integer> imatges_inici = new ArrayList();
     Bundle bundle;
-
-    int pos;
+    int pos, ample, altura;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popup);
 
-        //DECLAREM LA MIDA DE LA PANTALA
+        //recuparem valors
+        TextView popup = findViewById(R.id.textView13);
+
+        //declarem mida de la pantalla
         DisplayMetrics mida = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(mida);
+        ample = mida.widthPixels;
+        altura = mida.heightPixels;
 
-        int ample = mida.widthPixels;
-        int altura = mida.heightPixels;
-        //LI POSEM LES MIDES AL POPUP
+        //afegim les mides al PopUp
         getWindow().setLayout((int) (ample*0.85), (int) (altura*0.5));
 
-        //FEM AIXO PER PODER PASAR PER PARAMETRE LA POSICIÓ A MOSTRAR
+        //fem aixo per poder pasar per parametre la posició a mostrar
         bundle = getIntent().getExtras();
         pos = bundle.getInt("posicio");
 
-        //AFEGIM CADA PART DE L'INFORMACIÓ A L'ARRAYLIST
+        //afegim a la llista els textos
         informacio.add("");
         informacio.add("Aquests carreus donen informació de qui i com s’ha pogut  construir aquest edifici. Els lleons representen la força, el valor i la noblesa i per altra banda veiem l’escut de la ciutat. La gent de la ciutat s’han preocupat per poder-lo construir i hi ha col·laborat en la mesura que a cadascú li era possible.");
         informacio.add("La ciutat de Valls se sap que ja tenia orgue des de fa molts anys. Quan es va construir aquest edifici ja es va tenir present que n’havia de tenir un i l’any 1590 se sap que ja va sonar per primer cop. L’orgue que podeu veure a la fotografia és el resultat de les restauracions que aquell orgue va anar tenint al llarg dels anys.Durant 346 anys hi va haver un orgue sonant en aquesta nau fins que el 21 de juliol de l’any 1936, amb la guerra civil, va ser destruït. Han passat més de 80 anys fins que no s’ha pogut recuperar un orgue per a la ciutat.");
@@ -45,14 +47,7 @@ public class PopupInfo extends AppCompatActivity {
         informacio.add("A partir d'ara la Ciutat comptarà amb un intrument ubicat en aquest espai tan gran i que està pensat que tingui diferents usos: Concerts, acompanyament a la litúrgia i aprenentatge i estudi de l'instrument.");
         informacio.add("Aquesta cantata ha estat gravada durant l'any 2023.");
 
-        TextView popup = findViewById(R.id.textView13);
-        //LI PASEM LA POSICIÓ I MOSTRA EL CONTINGUT
+        //li passem la posició de la llista i mostra contingut
         popup.setText(informacio.get(pos));
-
-        //AFEGIM LES IMATGES A L'ARRAY D'IMATGES
-        int imatge1 = R.drawable.i2;
-        int imatge2 = R.drawable.img_orgue2;
-        imatges_inici.add(imatge1);
-        imatges_inici.add(imatge2);
     }
 }
