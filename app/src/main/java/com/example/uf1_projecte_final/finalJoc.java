@@ -27,17 +27,6 @@ public class finalJoc extends AppCompatActivity {
         //DONEM EL TOTAL D'INCORRECTES
         errors.setText(String.valueOf(erInt));
 
-        //CALCUL % PREGUNTES CORRECTES I D'INCORRECTES
-        suma = erInt + enInt;
-        Pencerts = enInt*100/suma;
-        Perrors = erInt*100/suma;
-
-        EditText Tcorrectes = (EditText) findViewById(R.id.idTotalCorrectes);
-        //DONEM % DE PREGUNTES CORRECTES
-        Tcorrectes.setText(String.valueOf(Pencerts));
-        EditText Tincorrectes = (EditText) findViewById(R.id.idTotalIncorrectes);
-        //DONEM % DE PREGUNTES INCORRECTES
-        Tincorrectes.setText(String.valueOf(Perrors));
 
         //ACCIÓ BOTO TORNAR INICI
         boto.setOnClickListener(new View.OnClickListener() {
