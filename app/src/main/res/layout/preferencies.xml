@@ -12,22 +12,11 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="28dp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#7E000000"
-            android:gravity="center"
-            android:text="PREFERÈNCIES"
-            android:textColor="#FAF8F8"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="93dp" />
+            android:layout_height="216dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,18 +33,17 @@
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textIsSelectable="false"
-                android:textSize="20sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="13dp" />
+                android:layout_height="29dp" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="236dp"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <ImageButton
                     android:id="@+id/botoSo"
@@ -65,8 +53,8 @@
                     app:srcCompat="@drawable/on" />
 
                 <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="13dp" />
+                    android:layout_width="43dp"
+                    android:layout_height="102dp" />
 
                 <ImageButton
                     android:id="@+id/botoNoSo"
