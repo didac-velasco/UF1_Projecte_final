@@ -12,7 +12,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -333,7 +332,7 @@ public class PreguntesJoc extends AppCompatActivity {
                         Preguntes_RadioButton3_3=false;
 
                         //CREEM UN INTENT NOU QUE ENS PASARA A LA PAG FINAL
-                        Intent intent = new Intent( PreguntesJoc.this, finalJoc.class);
+                        Intent intent = new Intent( PreguntesJoc.this, FinalJoc.class);
                         //PASEM LA VARIABLE D'ENCERTS I D'ERRORS PER PODER-LA UTILITZAR A L'ALTRE CLASS
                         intent.putExtra("errors", erInt);
                         intent.putExtra("encerts", enInt);

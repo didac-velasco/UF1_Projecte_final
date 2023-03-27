@@ -33,7 +33,7 @@
             android:name=".Historia"
             android:exported="true"></activity>
         <activity
-            android:name=".finalJoc"
+            android:name=".FinalJoc"
             android:exported="true"></activity>
         <activity
             android:name=".Cantates"

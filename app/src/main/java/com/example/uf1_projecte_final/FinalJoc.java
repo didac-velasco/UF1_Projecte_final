@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class finalJoc extends AppCompatActivity {
+public class FinalJoc extends AppCompatActivity {
     Bundle bundle;
     int erInt, enInt, Pencerts, Perrors, suma;
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class finalJoc extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //CREEM UN INTENT QUE ENS PORTARA A LA PAG INICIAL
-                Intent intent = new Intent( finalJoc.this, MainActivity.class);
+                Intent intent = new Intent( FinalJoc.this, MainActivity.class);
                 //EXECUTEM INTENT
                 startActivity(intent);
             }
